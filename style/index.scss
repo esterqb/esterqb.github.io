@@ -1,0 +1,279 @@
+///@author Ester Cubero Chaves
+
+@mixin centered{
+    display: grid;
+    align-items: center;
+    text-align: center;
+}
+@mixin links{
+    text-decoration: none;
+}
+@mixin postlinks{
+    background-color: #ffffffaf;
+    color: #3c86ff;
+}
+@mixin abouts{
+    height: 7vh;
+    width: 30vw;
+}
+@mixin text{
+    width: 85%;
+    margin: 0 auto;
+    line-height: 25px;
+}
+@mixin git{
+    width: 1.5vw;
+    margin: 0.5vw;
+}
+$img: 2.5vw;
+*{
+    margin:0;
+    padding:0;
+}
+@media (max-width:800px){
+    #wrapper{
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-rows: 25vh 70vh;
+        grid-template-areas: "nav"
+                            "content";
+        font-family: 'Times New Roman', Times, serif;
+    }
+    #nav{
+        background-color: #3c86ff;
+        position: sticky;
+        top:0;
+        width: 100vw;
+        .pic{
+            margin: 5% 3% 0 3%;
+            height:15vh;
+            float: left;
+            border-radius: 50%;
+            border: 2px solid #434b596f;
+        }
+        .name{
+            padding: 9% 0 0 0;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+        }
+        .st{
+            padding: 2% 0 0 0;
+            color: #fff;
+            font-size: 16px;
+        }
+        .scroll{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            border-top:1px solid #434b596f;
+            ul{
+                li:nth-child(4){
+                    border-right: 0px none;
+                }
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                background-color: #1966e0;
+                border-bottom: 1px solid #434b596f;
+                li{
+                border-right: 1px solid #ffffffaf;
+                padding: 3%;
+                list-style: none;
+                    a{
+                        text-decoration: none;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        #contactNav{
+            visibility: hidden;
+            display: none;
+        }
+    }
+    #content{
+        grid-area: content;
+        margin: 10% 2%;
+        h1{
+            font-size: 22px;
+            margin:1% 0;
+            color: #1966e0;
+        }
+        #about{
+            div{
+                @include text();
+                span{
+                    font-weight: bold;
+                }
+            }
+        }
+        #education,#work{
+            margin: 5% 0;
+            ul{
+                @include text();
+                li{
+                    list-style:square;
+                    ul{
+                        li{
+                            text-indent: 1%;
+                            list-style: none;
+                        }
+                    }
+                }
+            }
+        }
+        #contact{
+            margin: 5% 0;
+            display: flex;
+            #contacto{
+                margin: 10%;
+                #container{
+                    display: flex;
+                    margin: 4% 0;
+
+                }
+            }
+            img{
+                width: 10vw;
+            }
+            .git{
+                width: 8vw;
+                margin: 1%;
+            }
+            #cont{
+                margin: 4% 0 0 3%;
+                width: 20vw;
+                a{
+                    @include links();
+                    color: #000;
+                }
+            }
+        }
+    }
+}
+@media (min-width:800px){
+    #wrapper{
+        display: grid;
+        grid-template-columns: 30vw 70vw;
+        grid-template-rows: 100vh;
+        grid-template-areas: "nav content";
+        font-family: 'Times New Roman', Times, serif;
+    }
+    #nav{
+        position:fixed;
+        top:0;
+        bottom:0;
+        height: 100%;
+        color: #fff;
+        @include centered();
+        grid-area: nav;
+        background-color: #3c86ff;
+        border-right: 2px solid #434b596f;
+        .pic{
+            margin: 2% 25% 0 25%;
+            width: 15vw;
+            border-radius: 50%;
+            border: 2px solid #434b596f;
+        }
+        h2{
+            margin: -30% 0 -18% 0;
+        }
+        p{
+            margin: -10% 0 0 0;
+            font-size: 16px;
+        }
+        .scroll{
+            ul{ 
+                margin: -10% 0 0 0;
+                li{
+                    $white: #fff;
+                    @include centered();
+                    @include abouts();
+                    border-bottom: 1px solid #434b596f;
+                    a{
+                        @include links();
+                        @include centered();
+                        @include abouts();
+                        color: $white;
+                        font-size: 19px;
+                    }
+                    a:hover{
+                        @include postlinks();
+                        @include centered();
+                    }
+                    a:link{
+                        color: $white;
+                    }
+                }
+            }
+        }
+        #contactNav{
+            display: flex;
+            flex-direction: row;
+            align-content: space-between;
+            margin:0 auto;
+            img{
+                width: $img;
+            }
+            .git{
+                @include git();
+            }
+        }
+    }
+    #content{
+        grid-area: content;
+        margin: 1% 2%;
+        h1{
+            font-size: 22px;
+            margin:1% 0;
+            color: #1966e0;
+        }
+        #about{
+            div{
+                @include text();
+                span{
+                    font-weight: bold;
+                }
+            }
+        }
+        #education,#work{
+            ul{
+                @include text();
+                li{
+                    list-style:square;
+                    ul{
+                        li{
+                            text-indent: 1%;
+                            list-style: none;
+                        }
+                    }
+                }
+            }
+        }
+        #contact{
+            display: flex;
+            #contacto{
+                margin: 4%;
+                #container{
+                    display: flex;
+                    margin: 4% 0;
+                }
+            }
+            img{
+                width: $img;
+            }
+            .git{
+                @include git();
+            }
+            #cont{
+                margin: 4% 0 0 3%;
+                width: 20vw;
+                a{
+                    @include links();
+                    color: #000;
+                }
+            }
+        }
+    }
+}
