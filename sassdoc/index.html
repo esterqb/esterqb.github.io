@@ -1,0 +1,273 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>SassDoc</title><link rel="stylesheet" href="assets/css/main.css"><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,700" rel="stylesheet" type="text/css"><meta name="viewport" content="width=device-width"><meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible"><!-- Open Graph tags --><meta property="og:title" content="SassDoc - SassDoc"><meta property="og:type" content="website"><meta property="og:description" content="Release the docs!"><!-- Thanks to Sass-lang.com for the icons --><link href="assets/images/favicon.png" rel="shortcut icon"></head><body><aside class="sidebar" role="nav"><div class="sidebar__header"><h1 class="sidebar__title">SassDoc</h1></div><div class="sidebar__body"><button type="button" class="btn-toggle js-btn-toggle" data-alt="Open all">Close all</button><p class="sidebar__item sidebar__item--heading" data-slug="global styles"><a href="#global styles">global styles</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="global styles-css"><a href="#global styles-css">css</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="global styles" data-name="*" data-type="css"><a href="#global styles-css-*">*</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="icons"><a href="#icons">icons</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="icons-mixin"><a href="#icons-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="icons" data-name="git" data-type="mixin"><a href="#icons-mixin-git">git</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="layout"><a href="#layout">layout</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="layout-mixin"><a href="#layout-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="layout" data-name="centered" data-type="mixin"><a href="#layout-mixin-centered">centered</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="links"><a href="#links">links</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="links-mixin"><a href="#links-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="links" data-name="links" data-type="mixin"><a href="#links-mixin-links">links</a></li><li class="sidebar__item sassdoc__item" data-group="links" data-name="postlinks" data-type="mixin"><a href="#links-mixin-postlinks">postlinks</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="sections"><a href="#sections">sections</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="sections-mixin"><a href="#sections-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="sections" data-name="abouts" data-type="mixin"><a href="#sections-mixin-abouts">abouts</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="typography"><a href="#typography">typography</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="typography-mixin"><a href="#typography-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="typography" data-name="text" data-type="mixin"><a href="#typography-mixin-text">text</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="undefined"><a href="#undefined">General</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-css"><a href="#undefined-css">css</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="#wrapper" data-type="css"><a href="#undefined-css-#wrapper">#wrapper</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="#nav" data-type="css"><a href="#undefined-css-#nav">#nav</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=".pic" data-type="css"><a href="#undefined-css-.pic">.pic</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=".name" data-type="css"><a href="#undefined-css-.name">.name</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=".st" data-type="css"><a href="#undefined-css-.st">.st</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=".scroll" data-type="css"><a href="#undefined-css-.scroll">.scroll</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="a" data-type="css"><a href="#undefined-css-a">a</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="#contactNav" data-type="css"><a href="#undefined-css-#contactNav">#contactNav</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="#content" data-type="css"><a href="#undefined-css-#content">#content</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="h1" data-type="css"><a href="#undefined-css-h1">h1</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="#about" data-type="css"><a href="#undefined-css-#about">#about</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="#education,#work" data-type="css"><a href="#undefined-css-#education,#work">#education,#work</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="#contact" data-type="css"><a href="#undefined-css-#contact">#contact</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=".git" data-type="css"><a href="#undefined-css-.git">.git</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="#cont" data-type="css"><a href="#undefined-css-#cont">#cont</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="variables"><a href="#variables">variables</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="variables-variable"><a href="#variables-variable">variables</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="variables" data-name="img" data-type="variable"><a href="#variables-variable-img">img</a></li></ul></div></div></aside><article class="main" role="main"><header class="header" role="banner"><div class="container"><div class="sassdoc__searchbar searchbar"><label for="js-search-input" class="visually-hidden">Search</label><div class="searchbar__form" id="js-search"><input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search"><ul class="searchbar__suggestions" id="js-search-suggestions"></ul></div></div></div></header><section class="main__section"><h1 class="main__heading" id="global styles"><div class="container">global styles</div></h1><section class="main__sub-section" id="global styles-css"><h2 class="main__heading--secondary"><div class="container">css</div></h2><section class="main__item container item" id="global styles-css-*"><h3 class="item__heading"><a class="item__name" href="#global styles-css-*">*</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>* {
+  margin:0;
+    padding:0;
+}</code>" data-collapsed="* { ... }"><code>* { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Reinicio de estilos globales. Elimina el margen y el padding predeterminado de todos los elementos.</p></div></section></section></section><section class="main__section"><h1 class="main__heading" id="icons"><div class="container">icons</div></h1><section class="main__sub-section" id="icons-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="icons-mixin-git"><h3 class="item__heading"><a class="item__name" href="#icons-mixin-git">git</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin git() { 
+    width: 1.5vw;
+    margin: 0.5vw;
+ }" data-collapsed="@mixin git() { ... }"><code>@mixin git() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Mixin para ajustar el tamaño del ícono de GitHub.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p></section></section></section><section class="main__section"><h1 class="main__heading" id="layout"><div class="container">layout</div></h1><section class="main__sub-section" id="layout-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="layout-mixin-centered"><h3 class="item__heading"><a class="item__name" href="#layout-mixin-centered">centered</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin centered() { 
+    display: grid;
+    align-items: center;
+    text-align: center;
+ }" data-collapsed="@mixin centered() { ... }"><code>@mixin centered() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Mixin para centrar elementos con CSS Grid.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p></section></section></section><section class="main__section"><h1 class="main__heading" id="links"><div class="container">links</div></h1><section class="main__sub-section" id="links-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="links-mixin-links"><h3 class="item__heading"><a class="item__name" href="#links-mixin-links">links</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin links() { 
+    text-decoration: none;
+ }" data-collapsed="@mixin links() { ... }"><code>@mixin links() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Mixin para enlaces sin subrayado.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p></section><section class="main__item container item" id="links-mixin-postlinks"><h3 class="item__heading"><a class="item__name" href="#links-mixin-postlinks">postlinks</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin postlinks() { 
+    background-color: #ffffffaf;
+    color: #3c86ff;
+ }" data-collapsed="@mixin postlinks() { ... }"><code>@mixin postlinks() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Mixin para enlaces de publicaciones. Se usa para definir el color de fondo y el color del texto.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p></section></section></section><section class="main__section"><h1 class="main__heading" id="sections"><div class="container">sections</div></h1><section class="main__sub-section" id="sections-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="sections-mixin-abouts"><h3 class="item__heading"><a class="item__name" href="#sections-mixin-abouts">abouts</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin abouts() { 
+    height: 7vh;
+    width: 30vw;
+ }" data-collapsed="@mixin abouts() { ... }"><code>@mixin abouts() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Mixin para definir tamaños en secciones &quot;About&quot;.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p></section></section></section><section class="main__section"><h1 class="main__heading" id="typography"><div class="container">typography</div></h1><section class="main__sub-section" id="typography-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="typography-mixin-text"><h3 class="item__heading"><a class="item__name" href="#typography-mixin-text">text</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin text() { 
+    width: 85%;
+    margin: 0 auto;
+    line-height: 25px;
+ }" data-collapsed="@mixin text() { ... }"><code>@mixin text() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Mixin para dar formato al texto.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p></section></section></section><section class="main__section"><h1 class="main__heading" id="undefined"><div class="container">General</div></h1><section class="main__sub-section" id="undefined-css"><h2 class="main__heading--secondary"><div class="container">css</div></h2><section class="main__item container item" id="undefined-css-#wrapper"><h3 class="item__heading"><a class="item__name" href="#undefined-css-#wrapper">#wrapper</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>#wrapper {
+  display: grid;
+        grid-template-columns: 100vw;
+        grid-template-rows: 25vh 70vh;
+        grid-template-areas: &quot;nav&quot;
+                            &quot;content&quot;;
+        font-family: &#39;Times New Roman&#39;, Times, serif;
+}</code>" data-collapsed="#wrapper { ... }"><code>#wrapper { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Contenedor principal con una disposición en cuadrícula. @access public</p></div></section><section class="main__item container item" id="undefined-css-#nav"><h3 class="item__heading"><a class="item__name" href="#undefined-css-#nav">#nav</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>#nav {
+  background-color: #3c86ff;
+        position: sticky;
+        top:0;
+        width: 100vw;
+        /// Imagen de perfil en la navegación.
+        /// @type Image
+        .pic{
+            margin: 5% 3% 0 3%;
+            height:15vh;
+            float: left;
+            border-radius: 50%;
+            border: 2px solid #434b596f;
+        }
+        /// Nombre del usuario en la navegación.
+        /// @type Text
+        .name{
+            padding: 9% 0 0 0;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+        }
+        /// Información adicional debajo del nombre (studies).
+        .st{
+            padding: 2% 0 0 0;
+            color: #fff;
+            font-size: 16px;
+        }
+        /// Menú de navegación inferior con enlaces.
+        /// @group Navigation
+        .scroll{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            border-top:1px solid #434b596f;
+            ul{
+                li:nth-child(4){
+                    border-right: 0px none;
+                }
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                background-color: #1966e0;
+                border-bottom: 1px solid #434b596f;
+                li{
+                border-right: 1px solid #ffffffaf;
+                padding: 3%;
+                list-style: none;
+                    /// Enlace dentro del menú de navegación.
+                    /// @type Link
+                    a{
+                        text-decoration: none;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        /// Sección de contacto en la navegación (oculta en pantallas pequeñas).
+        /// @access private
+        #contactNav{
+            visibility: hidden;
+            display: none;
+        }
+}</code>" data-collapsed="#nav { ... }"><code>#nav { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Barra de navegación superior. @access public @group Navigation</p></div></section><section class="main__item container item" id="undefined-css-.pic"><h3 class="item__heading"><a class="item__name" href="#undefined-css-.pic">.pic</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.pic {
+  margin: 5% 3% 0 3%;
+            height:15vh;
+            float: left;
+            border-radius: 50%;
+            border: 2px solid #434b596f;
+}</code>" data-collapsed=".pic { ... }"><code>.pic { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Imagen de perfil en la navegación. @type Image</p></div></section><section class="main__item container item" id="undefined-css-.name"><h3 class="item__heading"><a class="item__name" href="#undefined-css-.name">.name</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.name {
+  padding: 9% 0 0 0;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+}</code>" data-collapsed=".name { ... }"><code>.name { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Nombre del usuario en la navegación. @type Text</p></div></section><section class="main__item container item" id="undefined-css-.st"><h3 class="item__heading"><a class="item__name" href="#undefined-css-.st">.st</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.st {
+  padding: 2% 0 0 0;
+            color: #fff;
+            font-size: 16px;
+}</code>" data-collapsed=".st { ... }"><code>.st { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Información adicional debajo del nombre (studies).</p></div></section><section class="main__item container item" id="undefined-css-.scroll"><h3 class="item__heading"><a class="item__name" href="#undefined-css-.scroll">.scroll</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.scroll {
+  position: absolute;
+            bottom: 0;
+            width: 100%;
+            border-top:1px solid #434b596f;
+            ul{
+                li:nth-child(4){
+                    border-right: 0px none;
+                }
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                background-color: #1966e0;
+                border-bottom: 1px solid #434b596f;
+                li{
+                border-right: 1px solid #ffffffaf;
+                padding: 3%;
+                list-style: none;
+                    /// Enlace dentro del menú de navegación.
+                    /// @type Link
+                    a{
+                        text-decoration: none;
+                        color: #fff;
+                    }
+                }
+            }
+}</code>" data-collapsed=".scroll { ... }"><code>.scroll { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Menú de navegación inferior con enlaces. @group Navigation</p></div></section><section class="main__item container item" id="undefined-css-a"><h3 class="item__heading"><a class="item__name" href="#undefined-css-a">a</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>a {
+  text-decoration: none;
+                        color: #fff;
+}</code>" data-collapsed="a { ... }"><code>a { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Enlace dentro del menú de navegación. @type Link</p></div></section><section class="main__item container item" id="undefined-css-#contactNav"><h3 class="item__heading"><a class="item__name" href="#undefined-css-#contactNav">#contactNav</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>#contactNav {
+  visibility: hidden;
+            display: none;
+}</code>" data-collapsed="#contactNav { ... }"><code>#contactNav { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Sección de contacto en la navegación (oculta en pantallas pequeñas). @access private</p></div></section><section class="main__item container item" id="undefined-css-#content"><h3 class="item__heading"><a class="item__name" href="#undefined-css-#content">#content</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>#content {
+  grid-area: content;
+        margin: 10% 2%;
+        /// Títulos dentro del contenido.
+        /// @type Heading
+        h1{
+            font-size: 22px;
+            margin:1% 0;
+            color: #1966e0;
+        }
+        /// Sección &quot;Sobre mí&quot;.
+        /// @group About
+        #about{
+            div{
+                @include text();
+                span{
+                    font-weight: bold;
+                }
+            }
+        }
+        /// Secciones de educación y experiencia laboral.
+        /// @group Experience
+        #education,#work{
+            margin: 5% 0;
+            ul{
+                @include text();
+                li{
+                    list-style:square;
+                    ul{
+                        li{
+                            text-indent: 1%;
+                            list-style: none;
+                        }
+                    }
+                }
+            }
+        }
+        /// Sección de contacto con íconos y enlaces.
+        /// @group Contact
+        #contact{
+            margin: 5% 0;
+            display: flex;
+            #contacto{
+                margin: 10%;
+                #container{
+                    display: flex;
+                    margin: 4% 0;
+
+                }
+            }
+            img{
+                width: 10vw;
+            }
+            /// Icono de GitHub.
+            /// @type Image
+            .git{
+                width: 8vw;
+                margin: 1%;
+            }
+            /// Enlaces de contacto.
+            #cont{
+                margin: 4% 0 0 3%;
+                width: 20vw;
+                a{
+                    @include links();
+                    color: #000;
+                }
+            }
+        }
+}</code>" data-collapsed="#content { ... }"><code>#content { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Sección de contenido principal. @group Content</p></div></section><section class="main__item container item" id="undefined-css-h1"><h3 class="item__heading"><a class="item__name" href="#undefined-css-h1">h1</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>h1 {
+  font-size: 22px;
+            margin:1% 0;
+            color: #1966e0;
+}</code>" data-collapsed="h1 { ... }"><code>h1 { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Títulos dentro del contenido. @type Heading</p></div></section><section class="main__item container item" id="undefined-css-#about"><h3 class="item__heading"><a class="item__name" href="#undefined-css-#about">#about</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>#about {
+  div{
+                @include text();
+                span{
+                    font-weight: bold;
+                }
+            }
+}</code>" data-collapsed="#about { ... }"><code>#about { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Sección &quot;Sobre mí&quot;. @group About</p></div></section><section class="main__item container item" id="undefined-css-#education,#work"><h3 class="item__heading"><a class="item__name" href="#undefined-css-#education,#work">#education,#work</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>#education,#work {
+  margin: 5% 0;
+            ul{
+                @include text();
+                li{
+                    list-style:square;
+                    ul{
+                        li{
+                            text-indent: 1%;
+                            list-style: none;
+                        }
+                    }
+                }
+            }
+}</code>" data-collapsed="#education,#work { ... }"><code>#education,#work { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Secciones de educación y experiencia laboral. @group Experience</p></div></section><section class="main__item container item" id="undefined-css-#contact"><h3 class="item__heading"><a class="item__name" href="#undefined-css-#contact">#contact</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>#contact {
+  margin: 5% 0;
+            display: flex;
+            #contacto{
+                margin: 10%;
+                #container{
+                    display: flex;
+                    margin: 4% 0;
+
+                }
+            }
+            img{
+                width: 10vw;
+            }
+            /// Icono de GitHub.
+            /// @type Image
+            .git{
+                width: 8vw;
+                margin: 1%;
+            }
+            /// Enlaces de contacto.
+            #cont{
+                margin: 4% 0 0 3%;
+                width: 20vw;
+                a{
+                    @include links();
+                    color: #000;
+                }
+            }
+}</code>" data-collapsed="#contact { ... }"><code>#contact { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Sección de contacto con íconos y enlaces. @group Contact</p></div></section><section class="main__item container item" id="undefined-css-.git"><h3 class="item__heading"><a class="item__name" href="#undefined-css-.git">.git</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.git {
+  width: 8vw;
+                margin: 1%;
+}</code>" data-collapsed=".git { ... }"><code>.git { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Icono de GitHub. @type Image</p></div></section><section class="main__item container item" id="undefined-css-#cont"><h3 class="item__heading"><a class="item__name" href="#undefined-css-#cont">#cont</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>#cont {
+  margin: 4% 0 0 3%;
+                width: 20vw;
+                a{
+                    @include links();
+                    color: #000;
+                }
+}</code>" data-collapsed="#cont { ... }"><code>#cont { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Enlaces de contacto.</p></div></section></section></section><section class="main__section"><h1 class="main__heading" id="variables"><div class="container">variables</div></h1><section class="main__sub-section" id="variables-variable"><h2 class="main__heading--secondary"><div class="container">variables</div></h2><section class="main__item container item" id="variables-variable-img"><h3 class="item__heading"><a class="item__name" href="#variables-variable-img">img</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$img: 2.5vw;</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Tamaño base para imágenes. Se utiliza para definir un tamaño estándar en vistas responsivas.</p></div><h3 class="item__sub-heading">Type</h3><p><code>Length</code></p></section></section></section><footer class="footer" role="contentinfo"><div class="container"><div class="footer__project-info project-info"><!-- Name and URL --> <span class="project-info__name">SassDoc</span><!-- Version --><!-- License --></div><a class="footer__watermark" href="http://sassdoc.com"><img src="assets/images/logo_light_inline.svg" alt="SassDoc Logo"></a></div></footer></article><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script><script src="assets/js/main.min.js"></script></body></html>
