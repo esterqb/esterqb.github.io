@@ -34,10 +34,11 @@ Añade aquí capturas de tu CV para que se vea el diseño.
 Si deseas clonar este proyecto y modificarlo, sigue estos pasos:
 
 # Clonar el repositorio
-git clone https://github.com/tuusuario/tu-repositorio.git
+git clone https://github.com/esterqb/esterqb.github.io
 
 # Navegar al directorio
-cd tu-repositorio
+cd esterqb.github.io
+cd style
 
 # Si deseas modificar los estilos, asegúrate de compilar los archivos SCSS
 sass --watch style/index.scss style/style.css
