@@ -1,0 +1,38 @@
+/// Mixin para centrar elementos con CSS Grid.
+/// @group Layout
+@mixin centered{
+    display: grid;
+    align-items: center;
+    text-align: center;
+}
+/// Mixin para enlaces sin subrayado.
+/// @group Links
+@mixin links{
+    text-decoration: none;
+}
+/// Mixin para enlaces de publicaciones.
+/// Se usa para definir el color de fondo y el color del texto.
+/// @group Links
+@mixin postlinks{
+    background-color: #ffffffaf;
+    color: #3c86ff;
+}
+/// Mixin para definir tamaños en secciones "About".
+/// @group Sections
+@mixin abouts{
+    height: 7vh;
+    width: 30vw;
+}
+/// Mixin para dar formato al texto.
+/// @group Typography
+@mixin text{
+    width: 85%;
+    margin: 0 auto;
+    line-height: 25px;
+}
+/// Mixin para ajustar el tamaño del ícono de GitHub.
+/// @group Icons
+@mixin git{
+    width: 1.5vw;
+    margin: 0.5vw;
+}

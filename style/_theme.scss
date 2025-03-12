@@ -1,0 +1,7 @@
+/// Reinicio de estilos globales.
+/// Elimina el margen y el padding predeterminado de todos los elementos.
+/// @group Global Styles
+*{
+    margin:0;
+    padding:0;
+}
