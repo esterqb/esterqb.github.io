@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aprende programación 💻</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="dist/styles.css">
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js"></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg bg-purple d-flex justify-content-between align-items-center sticky-top shadow">
+        <div class="container-fluid p-0">
+            <a class="navbar-brand fw-bold text-white" href="#">
+                <img src="assets/logoesterqb.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
+                Aprende programación
+            </a>
+        </div>
+        <a href="https://github.com/esterqb" target="_blank" class="d-inline-flex align-items-center text-decoration-none border rounded px-2 py-1 text-dark bg-light me-2" style="font-size: 1rem;">
+            <i class="bi bi-github me-2"></i>
+            esterqb
+        </a>
+    </nav>
+
+    <!--Intro-->
+    <div class="container text-center my-5">
+        <div class="row">
+            <div class="col">
+            <h1>📖 Aprende sobre programación: Python y Java 📖</h1>
+            <div class="mt-4">
+                <div class="lead mb-3">
+                ✨Bienvenid@ a tu espacio para aprender programación✨
+                </div>
+                <div class="mb-3">
+                    ⚠️ Página en construcción, ¡sé paciente por favor! ⚠️
+                </div>
+                <div class="mb-3">
+                En esta página encontrarás recursos y explicaciones simplificadas para adentrarte en el mundo de la programación, centrándonos en dos de los lenguajes más populares y versátiles: 
+                <strong>Python</strong>🐍 y <strong>Java</strong>☕. Aquí descubrirás desde los conceptos básicos hasta técnicas más avanzadas que te permitirán desarrollar tus propias aplicaciones y proyectos.
+                </div>
+                <div class="mb-3">
+                A través de una combinación de teoría y práctica, te guiaremos paso a paso para que comprendas los fundamentos de la programación, aprendas a diseñar algoritmos eficientes y domines la escritura de código en ambos lenguajes. No importa si estás comenzando o si quieres reforzar tus conocimientos, este espacio está diseñado para ayudarte a crecer como programador.
+                </div>
+                <div class="fw-bold">
+                ¡Prepárate para dar el primer paso en tu camino hacia el mundo del desarrollo de software!
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Parte 1-->
+    <div class="container">
+        <div class="col">
+            <h2>Parte 1: Introducción a la Programación. Teoría.</h2>
+            <div class="mb-2">
+            <button class="btn btn-sm boton w-30" type="button" data-bs-toggle="collapse" data-bs-target="#indice" aria-expanded="false" aria-controls="indice">
+                Índice de contenidos
+            </button>
+            </div>
+            <div class="collapse" id="indice">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><a href="#intro-intro" class="fw-bold">1.1. Introducción a la programación</a>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><a href="#tema-1-1-1">1.1.1 Problemas, algoritmos y programas</a></li>
+                            <li class="list-group-item"><a href="#tema-1-1-2">1.1.2 Programas y programar</a></li>
+                            <li class="list-group-item"><a href="#tema-1-1-3">1.1.3 Lenguajes y modelos de programación</a></li>
+                            <li class="list-group-item"><a href="#tema-1-1-4">1.1.4 Compiladores e intérpretes</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="list-group-item"><a href="#tema-1-2" class="fw-bold">1.2. Representación de algoritmos</a>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <a href="#tema-1-2-2">1.2.2 Representación de algoritmos</a>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><a href="#tema-1-2-2-1">Pseudocódigo</a></li>
+                                </ul>
+                            </li>
+                            <li class="list-group-item"><a href="#tema-1-2-3">1.2.3 Elementos de un algoritmo</a></li>
+                        </ul>
+                    </li>
+                    <li class="list-group-item"><a href="#tema-1-3" class="fw-bold">1.3 Instrucciones en pseudocódigo</a></li>
+                    <li class="list-group-item"><a href="#bibliografia-intro" class="fw-bold">Bibliografía</a></li>
+                </ul>
+            </div>
+            
+            <div class="mb-2">
+                <button class="btn btn-sm boton w-30" type="button" data-bs-toggle="collapse" data-bs-target="#contenido1" aria-expanded="false" aria-controls="contenido1">
+                    Introducción a la Programación
+                </button>
+            </div>
+            
+            <div class="collapse" id="contenido1">
+                <h4 id="tema-1-1-1" class="my-4">1.1.1.Problemas, algoritmos y programas.</h4>
+                <p>Un algoritmo es una secuencia de acciones que se realizan para resolver un problema. La tarea de programar en realidad se trata de resolver problemas. La programación se encarga de resolver problemas a través de algoritmos. El algoritmo debe especificar las acciones que se deben ejecutar y en qué orden deben ejecutarse. Un algoritmo es independiente del lenguaje de programación. Es decir, una vez tengamos un algoritmo que resuelve un problema, podemos aplicarlo sobre cualquier lenguaje de programación. Un programa es un algoritmo escrito con las sentencias específicas de un lenguaje de programación concreto. Un algoritmo recibe información de entrada, la procesa, y genera información de salida.</p>
+                <p>No todos los problemas pueden resolverse utilizando un ordenador. Solo se podrán resolver aquellos problemas que tengan una solución mecánica. Es decir, aquellos que se resuelvan por medio de una secuencia de instrucciones determinada. Son los denominados problemas computacionales o algorítmicos. Como por ejemplo, los relacionados con el cálculo numérico, el tratamiento de palabras, o la representación gráfica. Un ejemplo de problema computacional podría ser obtener el área de un cuadrado a partir de su lado. En cambio, un problema no computacional podría ser averiguar el color favorito de una persona a partir de su nombre.</p>
+                
+                <h4 id="tema-1-1-2" class="my-4">1.1.2.Programas y programar.</h4>
+                <p>La tarea de la programación en aplicaciones reales de una cierta envergadura es bastante compleja. Según la complejidad del problema a resolver podemos hablar de:</p>
+                <ul class="list-group">
+                    <li class="list-group-item">Programación a escala reducida: número reducido de líneas de programa, intervención de una sola persona. Por ejemplo, un programa para ordenar números.</li>
+                    <li class="list-group-item">Programación a gran escala: muchas líneas de programa, equipo de programadores. Por ejemplo, el desarrollo de una sistema operativo.</li>
+                </ul>
+                <p>Los programas tienen un ciclo de vida en el que se distinguen dos etapas: desarrollo y mantenimiento.</p>
+
+                <h4 id="tema-1-1-3" class="my-4">1.1.3.Lenguajes y modelos de programación.</h4>
+                <p>A nivel máquina, un programa es una sucesión de palabras expresadas en código binario (secuencia de 0s y 1s), en posiciones consecutivas de memoria que representan instrucciones o datos. Es el lenguaje máquina. Es evidente que los programas escritos en lenguaje máquina resultan ilegibles.</p>
+                <p>Los lenguajes ensambladores hacen uso de mnemotécnicos e identificadores para instrucciones y datos.</p>
+                <p>Ambos son lenguajes tan próximos a la máquina que se denominan lenguajes de bajo nivel.</p>
+                <p>Frente a los lenguajes de bajo nivel, se encuentran los lenguajes de alto nivel:</p>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Disponen de operadores y estructuras más próximas al lenguaje humano, esto permite al programador construir instrucciones de forma más sencilla.</li>
+                    <li class="list-group-item">Son más seguros que el código máquina y ayudan a no cometer errores evidentes.</li>
+                    <li class="list-group-item">El código es transportable (independiente de la máquina).</li>
+                    <li class="list-group-item">El código es más legible.</li>
+                </ul>
+
+                <h4 id="tema-1-1-4" class="my-4">1.1.4.Compiladores e intérpretes.</h4>
+                <p>Hay dos formas de traducir un programa escrito en un lenguaje de alto nivel al lenguaje máquina: interpretar y compilar.</p>
+                <p>En la interpretación se traduce a lenguaje máquina cada instrucción de manera individual en tiempo de ejecución (de una en una).</p>
+                <p>En la compilación se traducen de manera global todas las instrucciones por medio de un programa (compilador). En los lenguajes compilados se debe hacer siempre una compilación previa para poder ejecutar el programa resultante.</p>
+
+                <h3 id="tema-1-2" class="my-4">1.2.Representación de algoritmos.</h3>
+                <p>Para representar un algoritmo se suele utilizar algún método que permite independizarlo del lenguaje de programación utilizado. Esto nos permitirá codificar más tarde a través de cualquier lenguaje de programación. Existen diversas técnicas, podemos destacar:</p>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Diagramas de flujo (ordinogramas) Utilizan símbolos gráficos estándar y escriben los pasos del algoritmo dentro de los símbolos. A través de las líneas de flujo se indican la secuencia en que se deben ejecutar.</li>
+                    <li class="list-group-item">Lenguajes de descripción de algoritmos (Pseudocódigo).</li>
+                </ul>
+
+                <h5 id="tema-1-2-2-1" class="my-4">Pseudocódigo.</h5>
+                <p>Es un lenguaje para la descripción de algoritmos que procura mantener las propiedades de los diagramas de flujo: sencillez, claridad, normalización y flexibilidad. Su notación se basa en el lenguaje natural. La estructura general del pseudocódigo está dividida en dos partes:</p>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Nombre y entorno del programa: tipos, nombre de las variables y constantes que se utilizan.</li>
+                    <li class="list-group-item">Desarrollo ordenado y estructurado del algoritmo: esta segunda parte se corresponde con el diagrama de flujo.</li>
+                </ul>
+
+                <h3 id="tema-1-2-3" class="my-4">1.2.3.Elementos de un algoritmo.</h3>
+                <p>Un algoritmo está formado por:</p>
+                <ol>
+                    <li class="list-group-item">Datos: son los valores que describen los objetos con los que opera un ordenador, como pueden ser números o texto. Los datos se almacenan en variables y constantes. Los datos pueden ser de tipo: entero, real, texto y boolean. Representan cantidades numéricas, cadenas de texto y valores (verdadero o falso). Los datos se guardan en variables, que son espacios de memoria reservados para almacenar un tipo de datos.</li>
+                    <li class="list-group-item">Expresiones: es una combinación de constantes, variables, operadores, paréntesis y nombres de funciones. Las expresiones pueden ser aritméticas o lógicas.
+                        <ol>
+                            <li class="list-group-item">Las expresiones aritméticas tendrán resultado numérico, y tienen operandos (con constantes y variables numéricas) y operadores (aritméticos).
+                                <table class="table table-bordered table-hover text-center">
+                                    <thead>
+                                        <tr>
+                                            <th>Operador</th>
+                                            <th>Operación</th>
+                                            <th>Operador</th>
+                                            <th>Operación</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>+</td>
+                                            <td>Suma o signo</td>
+                                            <td>+=</td>
+                                            <td>Suma y asignación</td>
+                                        </tr>
+                                        <tr>
+                                            <td>-</td>
+                                            <td>Resta o signo</td>
+                                            <td>-=</td>
+                                            <td>Resta y asignación</td>
+                                        </tr>
+                                        <tr>
+                                            <td>*</td>
+                                            <td>Multiplicación</td>
+                                            <td>*=</td>
+                                            <td>Multiplicación y asignación</td>
+                                        </tr>
+                                        <tr>
+                                            <td>/</td>
+                                            <td>División</td>
+                                            <td>/=</td>
+                                            <td>División y asignación</td>
+                                        </tr>
+                                        <tr>
+                                            <td>%</td>
+                                            <td>Módulo</td>
+                                            <td>%=</td>
+                                            <td>Módulo y asignación</td>
+                                        </tr>
+                                        <tr>
+                                            <td>++</td>
+                                            <td>Incremento en 1</td>
+                                            <td>--</td>
+                                            <td>Decremento en 1</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </li>
+                            <li class="list-group-item">El resultado de las expresiones lógicas será de tipo booleando (verdadero o falso). Estas operaciones están formadas por: 
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Operandos: contantes, variables y expresiones lógicas.</li>
+                                    <li class="list-group-item">Operadores relacionales:
+                                        <table class="table table-bordered text-center">
+                                            <thead>
+                                                <tr>
+                                                <th>Operador</th>
+                                                <th>Operación</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                <td>==</td>
+                                                <td>Igual</td>
+                                                </tr>
+                                                <tr>
+                                                <td>!=</td>
+                                                <td>Distinto</td>
+                                                </tr>
+                                                <tr>
+                                                <td>&gt;</td>
+                                                <td>Mayor que</td>
+                                                </tr>
+                                                <tr>
+                                                <td>&lt;</td>
+                                                <td>Menor que</td>
+                                                </tr>
+                                                <tr>
+                                                <td>&gt;=</td>
+                                                <td>Mayor o igual que</td>
+                                                </tr>
+                                                <tr>
+                                                <td>&lt;=</td>
+                                                <td>Menor o igual que</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </li>
+                                    <li class="list-group-item">Las expresiones pueden agruparse a través de operadores lógicos. Este tipo de operadores se utilizan para hacer varias comprobaciones de forma conjunta, dichas expresiones pueden utilizar:
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">Operandos: constantes, variables y expresiones lógicas.</li>
+                                            <li class="list-group-item">Operadores relacionales.</li>
+                                            <li class="list-group-item">Operadores lógicos (not, and, or, xor).
+                                                <table class="table table-bordered text-center">
+                                                    <thead class="table-light">
+                                                        <tr>
+                                                        <th>Operador</th>
+                                                        <th>Operación</th>
+                                                        <th>Significado</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                        <td>!</td>
+                                                        <td>NOT</td>
+                                                        <td>Negación lógica</td>
+                                                        </tr>
+                                                        <tr>
+                                                        <td>&&</td>
+                                                        <td>AND</td>
+                                                        <td>Conjunción lógica (Y lógico)</td>
+                                                        </tr>
+                                                        <tr>
+                                                        <td>||</td>
+                                                        <td>OR</td>
+                                                        <td>Disyunción (O lógico)</td>
+                                                        </tr>
+                                                        <tr>
+                                                        <td>^</td>
+                                                        <td>XOR</td>
+                                                        <td>Disyunción Exclusiva (XOR)</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <table class="table table-bordered text-center">
+                                                    <thead class="table-light">
+                                                        <tr>
+                                                        <th>x</th>
+                                                        <th>y</th>
+                                                        <th>x && y</th>
+                                                        <th>x || y</th>
+                                                        <th>x ^ y</th>
+                                                        <th>!x</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                        <td>false</td>
+                                                        <td>false</td>
+                                                        <td>false</td>
+                                                        <td>false</td>
+                                                        <td>false</td>
+                                                        <td>true</td>
+                                                        </tr>
+                                                        <tr>
+                                                        <td>false</td>
+                                                        <td>true</td>
+                                                        <td>false</td>
+                                                        <td>true</td>
+                                                        <td>true</td>
+                                                        <td>true</td>
+                                                        </tr>
+                                                        <tr>
+                                                        <td>true</td>
+                                                        <td>false</td>
+                                                        <td>false</td>
+                                                        <td>true</td>
+                                                        <td>true</td>
+                                                        <td>false</td>
+                                                        </tr>
+                                                        <tr>
+                                                        <td>true</td>
+                                                        <td>true</td>
+                                                        <td>true</td>
+                                                        <td>true</td>
+                                                        <td>false</td>
+                                                        <td>false</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </li>
+                    <li class="list-group-item">Instrucciones: acciones básicas que implementan los algoritmos, como leer o escribir en variables.</li>
+                </ol>
+                
+                <h3 id="tema-1-3" class="my-4">1.3.Instrucciones en pseudocódigo.</h3>
+                <p>Las instrucciones se clasifican en:</p>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Declarativas: anuncian el uso de variables y constantes, se debe indicar el nombre de la variable y el tipo de dato que contendrá.</li>
+                    <li class="list-group-item">Primitivas: las ejecuta el procesador de manera inmediata; no dependen de ningún otro objeto o condición. Las operaciones de entrada leen valores y los asignan a un identificador en memoria, las de salida envían datos a un dispositivo desde la memoria, y las de asignación obtienen el resultado de una expresión y la guarda en un identificador en memoria.</li>
+                    <li class="list-group-item">Control: evalúan expresiones lógicas para controlar la ejecución de otras instrucciones o alterar el orden de ejecución normal (ejecución secuencial). Hay alternativas (ejecutan una instrucción o conjunto de instrucciones después de evaluar una condición) y repetitivas (el bloque de código puede ejecutarse más de una vez).</li>
+                </ul>
+
+                <h5 id="bibliografia-intro" class="my-4">Bibliografía.</h5>
+                <p>Material de Edu Torregrosa Llácer (aulaenlanube.com)</p>
+            </div>
+            <div>
+                <h4 class="my-4">Links útiles</h4>
+                <ul class="list">
+                    <li class="list-group-item"><a href="https://www.python.org/" target="_blank" class="text-purple">Sitio oficial de Python - Documentación</a></li>
+                    <li class="list-group-item"><a href="https://docs.python.org/3/tutorial/index.html" target="_blank" class="text-purple">Tutorial oficial de Python</a></li>
+                    <li class="list-group-item"><a href="https://www.w3schools.com/python/" target="_blank" class="text-purple">W3Schools - Python</a></li>
+                    <li class="list-group-item"><a href="https://ellibrodepython.com/" target="_blank" class="text-purple">El libro de Python</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--Parte 2 python-->
+    <div class="container">
+        <h2>Parte 2: Práctica de Python 🐍</h2>
+
+        <button class="btn btn-sm boton w-40 my-2 d-block" type="button" data-bs-toggle="collapse" data-bs-target="#indexpy" aria-expanded="false" aria-controls="indexpy">
+            Índice de contenidos
+        </button>
+
+        <div id="indexpy" class="collapse">
+            <div class="container ms-3">
+                <button class="btn btn-sm boton w-40 my-2 d-block" type="button" data-bs-toggle="collapse" data-bs-target="#ejercicio1" aria-expanded="false" aria-controls="ejercicio1">
+                    EJERCICIO 1:  Conversor de segundos a semanas, días, horas, minutos y segundos.
+                </button>
+                <div class="collapse" id="ejercicio1">
+                    <pre><code>
+    ''' Programa que lea una cantidad en segundos y muestre su equivalente en semanas, días, horas, minutos y segundos, según el formato de los siguientes ejemplos:
+    2178585 segundos equivalen a [ 3] semanas, 4 días, 05:09:45'''
+
+    SEG_MIN = 60
+    MIN_HORA = 60
+    HORAS_DIA = 24
+    DIAS_SEMANA = 7
+
+    SEG_HORA = SEG_MIN * MIN_HORA
+    SEG_DIA = SEG_HORA * HORAS_DIA
+    SEG_SEMANA = SEG_DIA * DIAS_SEMANA
+
+    seg_totales = int(input("Introduce segundos: "))
+
+    semanas = seg_totales // SEG_SEMANA
+    resto = seg_totales % SEG_SEMANA
+
+    dias = resto // SEG_DIA
+    resto = resto % SEG_DIA
+
+    horas = resto // SEG_HORA
+    resto = resto % SEG_HORA
+
+    minutos = resto // SEG_MIN
+    segundos = resto % SEG_MIN
+
+    print(f"{seg_totales} segundos equivalen a {semanas:2} semanas, {dias} días, {horas:02}:{minutos:02}:{segundos:02} ")
+                    </code></pre>
+                </div>
+                
+                <button class="btn btn-sm boton w-40 my-2 d-block" type="button" data-bs-toggle="collapse" data-bs-target="#ejercicio2" aria-expanded="false" aria-controls="ejercicio2">
+                    EJERCICIO 2: Programa para comprobar si un número es par o impar.
+                </button>
+                <div class="collapse" id="ejercicio2">
+                    <pre><code>
+    # PREGUNTAR SI UN NUMERO ES PAR O IMPAR
+
+    num = int(input("Introduce un número para saber si es par o impar: "))
+
+    if num % 2 == 0:
+        print(num,"es par.")
+    else:
+        print(num,"es impar.")
+                    </code></pre>
+                </div>
+
+                <button class="btn btn-sm boton w-40 my-2 d-block" type="button" data-bs-toggle="collapse" data-bs-target="#ejercicio3" aria-expanded="false" aria-controls="ejercicio3">
+                    EJERCICIO 3: Programa para comprobar si un número es par o impar.
+                </button>
+                <div class="collapse" id="ejercicio3">
+                    <pre><code>
+    # Haz un programa que, tras introducir tu nota, te diga si es insuficiente, suficiente, bien...
+    n = float(input("Introduzca su nota de 0 a 10: "))
+
+    if n &gt;= 0 and n &lt; 5:
+        print("Insuficiente.")
+    elif n &gt;= 5 and n &lt; 6:
+        print("Suficiente.")
+    elif n &gt;= 6 and n &lt; 7:
+        print("Bien.")
+    elif n &gt;= 7 and n &lt; 9:
+        print("Notable.")
+    elif n &gt;= 9 and n &lt; 10:
+        print("Sobresaliente.")
+    elif n == 10:
+        print("Matrícula de honor.")
+    else:
+        print("Nota no válida")
+                    </code></pre>
+                </div>
+
+                <button class="btn btn-sm boton w-40 my-2 d-block" type="button" data-bs-toggle="collapse" data-bs-target="#ejercicio4" aria-expanded="false" aria-controls="ejercicio4">
+                    EJERCICIO 4: Programa que intercambia los valores de dos variables de tipo entero.
+                </button>
+                <div class="collapse" id="ejercicio4">
+                    <pre><code>
+    # Programa que intercambia los valores de dos variables tipo entero
+
+    n1 = int(input("Introduzca un número: "))
+    n2 = int(input("Introduzca otro número: "))
+
+    print(n1, n2)
+
+    n1, n2 = n2, n1
+
+    print("Variables intercambiadas:", n1," y ", n2)
+                    </code></pre>
+                </div>
+
+                <button class="btn btn-sm boton w-40 my-2 d-block" type="button" data-bs-toggle="collapse" data-bs-target="#ejercicio5" aria-expanded="false" aria-controls="ejercicio5">
+                    EJERCICIO 5: Programa que lea de teclado una letra minúscula y la escriba en mayúscula.
+                </button>
+                <div class="collapse" id="ejercicio5">
+                    <pre><code>
+    ''' Programa que lea de teclado una letra minúscula y escriba la letra mayúscula correspondiente a la letra minúscula leída previamente '''
+    try:
+        # Leer una letra desde el teclado
+        letra_minuscula = input("Introduce una letra minúscula: ")
+
+        # Comprobamos que se haya introducido una única letra
+        if len(letra_minuscula) != 1:
+            raise ValueError("La entrada debe ser una única letra.")
+
+        # Comprobamos si es un carácter alfabético
+        if not letra_minuscula.isalpha():
+            raise ValueError("La entrada debe ser una letra.")
+
+        # Comprobar que la letra de entrada sea minúscula
+        if not letra_minuscula.islower():
+            raise ValueError("La letra debe ser minúscula.")
+
+        letra_mayuscula = letra_minuscula.upper()
+
+        print(f"La letra mayúscula correspondiente es: {letra_mayuscula}")
+    except ValueError as e:
+        print(f"Error: {e}")
+                    </code></pre>
+                </div>
+
+                <button class="btn btn-sm boton w-70 my-2 d-block" type="button" data-bs-toggle="collapse" data-bs-target="#ejercicio6" aria-expanded="false" aria-controls="ejercicio6">
+                    EJERCICIO 6: Programa que pida un primer número y un segundo número e indique los números primos entre ellos.
+                </button>
+                <div class="collapse" id="ejercicio6">
+                    <pre><code>
+    #Crea un programa que pida un número 1 y un número 2 e indique los números primos entre el num1 y num2
+    def es_primo(n):
+        if n < 2:
+            return False
+
+        for i in range(2, n):
+            if n % i == 0:
+                return False
+
+        return True
+
+
+    num1 = int(input("Introduce un nº: "))
+    num2 = int(input("Introduce otro nº: "))
+
+    primos = []
+    for i in range(num1, num2):
+        if es_primo(i):
+            primos.append(i)
+
+    print(f"Lista de números primos desde {num1} hasta {num2}: {primos}")
+                    </code></pre>
+                </div>
+                
+                <button class="btn btn-sm boton w-40 my-2 d-block" type="button" data-bs-toggle="collapse" data-bs-target="#ejercicio7" aria-expanded="false" aria-controls="ejercicio7">
+                    EJERCICIO 7: Programa que pida dos números y sume todos los números pares en el intervalo.
+                </button>
+                <div class="collapse" id="ejercicio7">
+                    <pre><code>
+    # Ejercicio que solicita leer dos números enteros de teclado y sumar todos los números pares en el intervalo. También se debe definir un procedimiento para la lectura correcta del intervalo y una función para calcular la suma.
+
+    def leer_intervalo():
+        a = int(input("Primer número: "))
+        b = int(input("Segundo número: "))
+        while (a > b):
+            print("El primer número debe ser menor")
+            a = int(input("Primer número: "))
+            b = int(input("Segundo número: "))
+        return a, b
+
+
+    def suma_pares(a, b):
+        suma = 0
+        for i in range(a, b + 1):
+            if i % 2 == 0:
+                suma += i
+        return suma
+
+
+    def main():
+        a, b = leer_intervalo()
+        resultado = suma_pares(a, b)
+        print(f"La suma de los números pares entre {a} y {b} es: {resultado}")
+
+
+    main()
+                    </code></pre>
+                </div>
+                            
+                <button class="btn btn-sm boton w-60 my-2 d-block" type="button" data-bs-toggle="collapse" data-bs-target="#ejercicio8" aria-expanded="false" aria-controls="ejercicio8">
+                    EJERCICIO 8: Programa que imprima todas las tablas de multiplicar del 1 al 9 usando dos for anidados.
+                </button>
+                <div class="collapse" id="ejercicio8">
+                    <pre><code>
+    # Crea un programa que imprima todas las tablas de multiplicar del 1 al 9, ambos inclusive.
+    # Por ejemplo: 1*1 = 1
+    # Pista de eficiencia: Utiliza 2 for anidados
+    print("Tablas de multiplicar: ")
+    for i in range(1, 10):
+        for j in range(1, 10):
+            print(f"{i} * {j} = {i * j}")
+        print()
+                    </code></pre>
+                </div>
+                                        
+                <button class="btn btn-sm boton w-60 my-2 d-block" type="button" data-bs-toggle="collapse" data-bs-target="#ejercicio9" aria-expanded="false" aria-controls="ejercicio9">
+                    EJERCICIO 9: Programa que dibuje un triángulo con la altura deseada.
+                </button>
+                <div class="collapse" id="ejercicio9">
+                    <pre><code>
+    # Dibujar un triangulo de asteriscos con altura N
+    # El ejercicio solicita leer un número entero N del teclado para dibujar un triángulo de asteriscos
+    # Se deben definir al menos 3 subprogramas
+    # Ejemplo de Output: Triangulo de altura 4
+    # *
+    # ***
+    # *****
+    # *******
+
+    def dibujar_linea():
+        print("*", end="")
+
+
+    def dibujar_triangulo(n):
+        for i in range(1, n + 1):
+            for j in range(2 * i - 1):
+                dibujar_linea()
+            print()
+
+
+    def main():
+        n = int(input("Introduce la altura del triángulo: "))
+        dibujar_triangulo(n)
+
+
+    main()
+                    </code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

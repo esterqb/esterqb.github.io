@@ -1,0 +1,45 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+.text-purple{
+  color:$purple !important;
+  &:hover{
+    color: #5a32a3 !important;
+  }
+}
+.bg-purple {
+  background-color: $purple !important;
+  color: white !important;
+}
+.boton {
+  border: 1px solid $purple !important;
+  border-radius: 5px !important;
+  color: $purple !important;
+  background-color:white !important;
+  &:hover{
+    background-color: $purple !important;
+    color: white !important;
+  }
+  &[aria-expanded="true"] {
+    background-color: $purple !important;
+    color: white !important;
+  }
+}
+#indice{
+  a{
+    text-decoration: none;
+    color: black;
+    &:hover{
+      color: $purple;
+    }
+    &:hover::after {
+        content: '✨';
+        font-size: 1.2em;
+        position: absolute;
+        animation: sparkle 1s infinite alternate;
+    }
+  }  
+}
+
+@import "bootstrap/scss/bootstrap";
