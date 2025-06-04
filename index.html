@@ -350,249 +350,666 @@
     <div class="container">
         <h2>Parte 2: Práctica de Python 🐍</h2>
 
-        <button class="btn btn-sm boton w-40 my-2 d-block" type="button" data-bs-toggle="collapse" data-bs-target="#indexpy" aria-expanded="false" aria-controls="indexpy">
-            Índice de contenidos
+        <button class="btn btn-sm boton w-40 my-2 d-block" type="button" data-bs-toggle="collapse" data-bs-target="#ejs1" aria-expanded="false" aria-controls="ejs1">
+            13 Ejercicios de Python
         </button>
 
-        <div id="indexpy" class="collapse">
-            <div class="container ms-3">
-                <button class="btn btn-sm boton w-40 my-2 d-block" type="button" data-bs-toggle="collapse" data-bs-target="#ejercicio1" aria-expanded="false" aria-controls="ejercicio1">
-                    EJERCICIO 1:  Conversor de segundos a semanas, días, horas, minutos y segundos.
-                </button>
-                <div class="collapse" id="ejercicio1">
-                    <pre><code>
-    ''' Programa que lea una cantidad en segundos y muestre su equivalente en semanas, días, horas, minutos y segundos, según el formato de los siguientes ejemplos:
-    2178585 segundos equivalen a [ 3] semanas, 4 días, 05:09:45'''
+        <div id="ejs1" class="collapse ms-3">
+            <button class="btn btn-sm boton w-40 my-2 d-block" type="button" data-bs-toggle="collapse" data-bs-target="#ejercicio1" aria-expanded="false" aria-controls="ejercicio1">
+                EJERCICIO 1:  Conversor de segundos a semanas, días, horas, minutos y segundos.
+            </button>
+            <div class="collapse" id="ejercicio1">
+                <pre><code>
+''' Programa que lea una cantidad en segundos y muestre su equivalente en semanas, días, horas, minutos y segundos, según el formato de los siguientes ejemplos:
+2178585 segundos equivalen a [ 3] semanas, 4 días, 05:09:45'''
 
-    SEG_MIN = 60
-    MIN_HORA = 60
-    HORAS_DIA = 24
-    DIAS_SEMANA = 7
+SEG_MIN = 60
+MIN_HORA = 60
+HORAS_DIA = 24
+DIAS_SEMANA = 7
 
-    SEG_HORA = SEG_MIN * MIN_HORA
-    SEG_DIA = SEG_HORA * HORAS_DIA
-    SEG_SEMANA = SEG_DIA * DIAS_SEMANA
+SEG_HORA = SEG_MIN * MIN_HORA
+SEG_DIA = SEG_HORA * HORAS_DIA
+SEG_SEMANA = SEG_DIA * DIAS_SEMANA
 
-    seg_totales = int(input("Introduce segundos: "))
+seg_totales = int(input("Introduce segundos: "))
 
-    semanas = seg_totales // SEG_SEMANA
-    resto = seg_totales % SEG_SEMANA
+semanas = seg_totales // SEG_SEMANA
+resto = seg_totales % SEG_SEMANA
 
-    dias = resto // SEG_DIA
-    resto = resto % SEG_DIA
+dias = resto // SEG_DIA
+resto = resto % SEG_DIA
 
-    horas = resto // SEG_HORA
-    resto = resto % SEG_HORA
+horas = resto // SEG_HORA
+resto = resto % SEG_HORA
 
-    minutos = resto // SEG_MIN
-    segundos = resto % SEG_MIN
+minutos = resto // SEG_MIN
+segundos = resto % SEG_MIN
 
-    print(f"{seg_totales} segundos equivalen a {semanas:2} semanas, {dias} días, {horas:02}:{minutos:02}:{segundos:02} ")
-                    </code></pre>
-                </div>
-                
-                <button class="btn btn-sm boton w-40 my-2 d-block" type="button" data-bs-toggle="collapse" data-bs-target="#ejercicio2" aria-expanded="false" aria-controls="ejercicio2">
-                    EJERCICIO 2: Programa para comprobar si un número es par o impar.
-                </button>
-                <div class="collapse" id="ejercicio2">
-                    <pre><code>
-    # PREGUNTAR SI UN NUMERO ES PAR O IMPAR
+print(f"{seg_totales} segundos equivalen a {semanas:2} semanas, {dias} días, {horas:02}:{minutos:02}:{segundos:02} ")
+                </code></pre>
+            </div>
+            
+            <button class="btn btn-sm boton w-40 my-2 d-block" type="button" data-bs-toggle="collapse" data-bs-target="#ejercicio2" aria-expanded="false" aria-controls="ejercicio2">
+                EJERCICIO 2: Programa para comprobar si un número es par o impar.
+            </button>
+            <div class="collapse" id="ejercicio2">
+                <pre><code>
+# PREGUNTAR SI UN NUMERO ES PAR O IMPAR
 
-    num = int(input("Introduce un número para saber si es par o impar: "))
+num = int(input("Introduce un número para saber si es par o impar: "))
 
-    if num % 2 == 0:
-        print(num,"es par.")
-    else:
-        print(num,"es impar.")
-                    </code></pre>
-                </div>
+if num % 2 == 0:
+    print(num,"es par.")
+else:
+    print(num,"es impar.")
+                </code></pre>
+            </div>
 
-                <button class="btn btn-sm boton w-40 my-2 d-block" type="button" data-bs-toggle="collapse" data-bs-target="#ejercicio3" aria-expanded="false" aria-controls="ejercicio3">
-                    EJERCICIO 3: Programa para comprobar si un número es par o impar.
-                </button>
-                <div class="collapse" id="ejercicio3">
-                    <pre><code>
-    # Haz un programa que, tras introducir tu nota, te diga si es insuficiente, suficiente, bien...
-    n = float(input("Introduzca su nota de 0 a 10: "))
+            <button class="btn btn-sm boton w-40 my-2 d-block" type="button" data-bs-toggle="collapse" data-bs-target="#ejercicio3" aria-expanded="false" aria-controls="ejercicio3">
+                EJERCICIO 3: Programa para comprobar si un número es par o impar.
+            </button>
+            <div class="collapse" id="ejercicio3">
+                <pre><code>
+# Haz un programa que, tras introducir tu nota, te diga si es insuficiente, suficiente, bien...
+n = float(input("Introduzca su nota de 0 a 10: "))
 
-    if n &gt;= 0 and n &lt; 5:
-        print("Insuficiente.")
-    elif n &gt;= 5 and n &lt; 6:
-        print("Suficiente.")
-    elif n &gt;= 6 and n &lt; 7:
-        print("Bien.")
-    elif n &gt;= 7 and n &lt; 9:
-        print("Notable.")
-    elif n &gt;= 9 and n &lt; 10:
-        print("Sobresaliente.")
-    elif n == 10:
-        print("Matrícula de honor.")
-    else:
-        print("Nota no válida")
-                    </code></pre>
-                </div>
+if n &gt;= 0 and n &lt; 5:
+    print("Insuficiente.")
+elif n &gt;= 5 and n &lt; 6:
+    print("Suficiente.")
+elif n &gt;= 6 and n &lt; 7:
+    print("Bien.")
+elif n &gt;= 7 and n &lt; 9:
+    print("Notable.")
+elif n &gt;= 9 and n &lt; 10:
+    print("Sobresaliente.")
+elif n == 10:
+    print("Matrícula de honor.")
+else:
+    print("Nota no válida")
+                </code></pre>
+            </div>
 
-                <button class="btn btn-sm boton w-40 my-2 d-block" type="button" data-bs-toggle="collapse" data-bs-target="#ejercicio4" aria-expanded="false" aria-controls="ejercicio4">
-                    EJERCICIO 4: Programa que intercambia los valores de dos variables de tipo entero.
-                </button>
-                <div class="collapse" id="ejercicio4">
-                    <pre><code>
-    # Programa que intercambia los valores de dos variables tipo entero
+            <button class="btn btn-sm boton w-40 my-2 d-block" type="button" data-bs-toggle="collapse" data-bs-target="#ejercicio4" aria-expanded="false" aria-controls="ejercicio4">
+                EJERCICIO 4: Programa que intercambia los valores de dos variables de tipo entero.
+            </button>
+            <div class="collapse" id="ejercicio4">
+                <pre><code>
+# Programa que intercambia los valores de dos variables tipo entero
 
-    n1 = int(input("Introduzca un número: "))
-    n2 = int(input("Introduzca otro número: "))
+n1 = int(input("Introduzca un número: "))
+n2 = int(input("Introduzca otro número: "))
 
-    print(n1, n2)
+print(n1, n2)
 
-    n1, n2 = n2, n1
+n1, n2 = n2, n1
 
-    print("Variables intercambiadas:", n1," y ", n2)
-                    </code></pre>
-                </div>
+print("Variables intercambiadas:", n1," y ", n2)
+                </code></pre>
+            </div>
 
-                <button class="btn btn-sm boton w-40 my-2 d-block" type="button" data-bs-toggle="collapse" data-bs-target="#ejercicio5" aria-expanded="false" aria-controls="ejercicio5">
-                    EJERCICIO 5: Programa que lea de teclado una letra minúscula y la escriba en mayúscula.
-                </button>
-                <div class="collapse" id="ejercicio5">
-                    <pre><code>
-    ''' Programa que lea de teclado una letra minúscula y escriba la letra mayúscula correspondiente a la letra minúscula leída previamente '''
-    try:
-        # Leer una letra desde el teclado
-        letra_minuscula = input("Introduce una letra minúscula: ")
+            <button class="btn btn-sm boton w-40 my-2 d-block" type="button" data-bs-toggle="collapse" data-bs-target="#ejercicio5" aria-expanded="false" aria-controls="ejercicio5">
+                EJERCICIO 5: Programa que lea de teclado una letra minúscula y la escriba en mayúscula.
+            </button>
+            <div class="collapse" id="ejercicio5">
+                <pre><code>
+''' Programa que lea de teclado una letra minúscula y escriba la letra mayúscula correspondiente a la letra minúscula leída previamente '''
+try:
+    # Leer una letra desde el teclado
+    letra_minuscula = input("Introduce una letra minúscula: ")
 
-        # Comprobamos que se haya introducido una única letra
-        if len(letra_minuscula) != 1:
-            raise ValueError("La entrada debe ser una única letra.")
+    # Comprobamos que se haya introducido una única letra
+    if len(letra_minuscula) != 1:
+        raise ValueError("La entrada debe ser una única letra.")
 
-        # Comprobamos si es un carácter alfabético
-        if not letra_minuscula.isalpha():
-            raise ValueError("La entrada debe ser una letra.")
+    # Comprobamos si es un carácter alfabético
+    if not letra_minuscula.isalpha():
+        raise ValueError("La entrada debe ser una letra.")
 
-        # Comprobar que la letra de entrada sea minúscula
-        if not letra_minuscula.islower():
-            raise ValueError("La letra debe ser minúscula.")
+    # Comprobar que la letra de entrada sea minúscula
+    if not letra_minuscula.islower():
+        raise ValueError("La letra debe ser minúscula.")
 
-        letra_mayuscula = letra_minuscula.upper()
+    letra_mayuscula = letra_minuscula.upper()
 
-        print(f"La letra mayúscula correspondiente es: {letra_mayuscula}")
-    except ValueError as e:
-        print(f"Error: {e}")
-                    </code></pre>
-                </div>
+    print(f"La letra mayúscula correspondiente es: {letra_mayuscula}")
+except ValueError as e:
+    print(f"Error: {e}")
+                </code></pre>
+            </div>
 
-                <button class="btn btn-sm boton w-70 my-2 d-block" type="button" data-bs-toggle="collapse" data-bs-target="#ejercicio6" aria-expanded="false" aria-controls="ejercicio6">
-                    EJERCICIO 6: Programa que pida un primer número y un segundo número e indique los números primos entre ellos.
-                </button>
-                <div class="collapse" id="ejercicio6">
-                    <pre><code>
-    #Crea un programa que pida un número 1 y un número 2 e indique los números primos entre el num1 y num2
-    def es_primo(n):
-        if n < 2:
+            <button class="btn btn-sm boton w-70 my-2 d-block" type="button" data-bs-toggle="collapse" data-bs-target="#ejercicio6" aria-expanded="false" aria-controls="ejercicio6">
+                EJERCICIO 6: Programa que pida un primer número y un segundo número e indique los números primos entre ellos.
+            </button>
+            <div class="collapse" id="ejercicio6">
+                <pre><code>
+#Crea un programa que pida un número 1 y un número 2 e indique los números primos entre el num1 y num2
+def es_primo(n):
+    if n < 2:
+        return False
+
+    for i in range(2, n):
+        if n % i == 0:
             return False
 
-        for i in range(2, n):
-            if n % i == 0:
-                return False
-
-        return True
+    return True
 
 
-    num1 = int(input("Introduce un nº: "))
-    num2 = int(input("Introduce otro nº: "))
+num1 = int(input("Introduce un nº: "))
+num2 = int(input("Introduce otro nº: "))
 
-    primos = []
-    for i in range(num1, num2):
-        if es_primo(i):
-            primos.append(i)
+primos = []
+for i in range(num1, num2):
+    if es_primo(i):
+        primos.append(i)
 
-    print(f"Lista de números primos desde {num1} hasta {num2}: {primos}")
-                    </code></pre>
-                </div>
-                
-                <button class="btn btn-sm boton w-40 my-2 d-block" type="button" data-bs-toggle="collapse" data-bs-target="#ejercicio7" aria-expanded="false" aria-controls="ejercicio7">
-                    EJERCICIO 7: Programa que pida dos números y sume todos los números pares en el intervalo.
-                </button>
-                <div class="collapse" id="ejercicio7">
-                    <pre><code>
-    # Ejercicio que solicita leer dos números enteros de teclado y sumar todos los números pares en el intervalo. También se debe definir un procedimiento para la lectura correcta del intervalo y una función para calcular la suma.
+print(f"Lista de números primos desde {num1} hasta {num2}: {primos}")
+                </code></pre>
+            </div>
+            
+            <button class="btn btn-sm boton w-40 my-2 d-block" type="button" data-bs-toggle="collapse" data-bs-target="#ejercicio7" aria-expanded="false" aria-controls="ejercicio7">
+                EJERCICIO 7: Programa que pida dos números y sume todos los números pares en el intervalo.
+            </button>
+            <div class="collapse" id="ejercicio7">
+                <pre><code>
+# Ejercicio que solicita leer dos números enteros de teclado y sumar todos los números pares en el intervalo. También se debe definir un procedimiento para la lectura correcta del intervalo y una función para calcular la suma.
 
-    def leer_intervalo():
+def leer_intervalo():
+    a = int(input("Primer número: "))
+    b = int(input("Segundo número: "))
+    while (a > b):
+        print("El primer número debe ser menor")
         a = int(input("Primer número: "))
         b = int(input("Segundo número: "))
-        while (a > b):
-            print("El primer número debe ser menor")
-            a = int(input("Primer número: "))
-            b = int(input("Segundo número: "))
-        return a, b
+    return a, b
 
 
-    def suma_pares(a, b):
-        suma = 0
-        for i in range(a, b + 1):
-            if i % 2 == 0:
-                suma += i
-        return suma
+def suma_pares(a, b):
+    suma = 0
+    for i in range(a, b + 1):
+        if i % 2 == 0:
+            suma += i
+    return suma
 
 
-    def main():
-        a, b = leer_intervalo()
-        resultado = suma_pares(a, b)
-        print(f"La suma de los números pares entre {a} y {b} es: {resultado}")
+def main():
+    a, b = leer_intervalo()
+    resultado = suma_pares(a, b)
+    print(f"La suma de los números pares entre {a} y {b} es: {resultado}")
 
 
-    main()
-                    </code></pre>
-                </div>
-                            
-                <button class="btn btn-sm boton w-60 my-2 d-block" type="button" data-bs-toggle="collapse" data-bs-target="#ejercicio8" aria-expanded="false" aria-controls="ejercicio8">
-                    EJERCICIO 8: Programa que imprima todas las tablas de multiplicar del 1 al 9 usando dos for anidados.
-                </button>
-                <div class="collapse" id="ejercicio8">
-                    <pre><code>
-    # Crea un programa que imprima todas las tablas de multiplicar del 1 al 9, ambos inclusive.
-    # Por ejemplo: 1*1 = 1
-    # Pista de eficiencia: Utiliza 2 for anidados
-    print("Tablas de multiplicar: ")
-    for i in range(1, 10):
-        for j in range(1, 10):
-            print(f"{i} * {j} = {i * j}")
+main()
+                </code></pre>
+            </div>
+                        
+            <button class="btn btn-sm boton w-60 my-2 d-block" type="button" data-bs-toggle="collapse" data-bs-target="#ejercicio8" aria-expanded="false" aria-controls="ejercicio8">
+                EJERCICIO 8: Programa que imprima todas las tablas de multiplicar del 1 al 9 usando dos for anidados.
+            </button>
+            <div class="collapse" id="ejercicio8">
+                <pre><code>
+# Crea un programa que imprima todas las tablas de multiplicar del 1 al 9, ambos inclusive.
+# Por ejemplo: 1*1 = 1
+# Pista de eficiencia: Utiliza 2 for anidados
+print("Tablas de multiplicar: ")
+for i in range(1, 10):
+    for j in range(1, 10):
+        print(f"{i} * {j} = {i * j}")
+    print()
+                </code></pre>
+            </div>
+                                    
+            <button class="btn btn-sm boton w-60 my-2 d-block" type="button" data-bs-toggle="collapse" data-bs-target="#ejercicio9" aria-expanded="false" aria-controls="ejercicio9">
+                EJERCICIO 9: Programa que dibuje un triángulo con la altura deseada.
+            </button>
+            <div class="collapse" id="ejercicio9">
+                <pre><code>
+# Dibujar un triangulo de asteriscos con altura N
+# El ejercicio solicita leer un número entero N del teclado para dibujar un triángulo de asteriscos
+# Se deben definir al menos 3 subprogramas
+# Ejemplo de Output: Triangulo de altura 4
+# *
+# ***
+# *****
+# *******
+
+def dibujar_linea():
+    print("*", end="")
+
+
+def dibujar_triangulo(n):
+    for i in range(1, n + 1):
+        for j in range(2 * i - 1):
+            dibujar_linea()
         print()
-                    </code></pre>
+
+
+def main():
+    n = int(input("Introduce la altura del triángulo: "))
+    dibujar_triangulo(n)
+
+
+main()
+                </code></pre>
+            </div>
+
+            <button class="btn btn-sm boton w-60 my-2 d-block" type="button" data-bs-toggle="collapse" data-bs-target="#ejercicio10" aria-expanded="false" aria-controls="ejercicio10">
+                EJERCICIO 10: Crea una función que reciba una cadena de texto y cuente cuántas palabras tiene.
+            </button>
+            <div class="collapse" id="ejercicio10">
+                <pre><code>
+# Crea una función que reciba una cadena de texto y cuente cuántas palabras tiene.
+
+def contar_palabras(cadena):
+palabras = cadena.split()
+return len(palabras)
+
+# Ejemplo de uso
+cadena = "En un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho tiempo que vivía un hidalgo de los de lanza en astillero, adarga antigua, rocín flaco y galgo corredor."
+print(contar_palabras(cadena))
+
+# Probando el Ej2 con un texto introducido por el usuario
+text2 = input("Introduce un texto: ")
+print(f"El texto {text2} tiene: {contar_palabras(text2)} palabras")
+                </code></pre>
+            </div>
+
+            <button class="btn btn-sm boton w-60 my-2 d-block" type="button" data-bs-toggle="collapse" data-bs-target="#ejercicio11" aria-expanded="false" aria-controls="ejercicio11">
+                EJERCICIO 11: Escribe una función que utilice *args y **kwargs para aceptar múltiples parámetros y los imprima con formato.
+            </button>
+            <div class="collapse" id="ejercicio11">
+                <pre><code>
+# Escribe una función que utilice *args y **kwargs para aceptar múltiples parámetros y los imprima con formato.
+
+def imprimir_datos(*args, **kwargs):
+print("Argumentos posicionales:", args)
+print("Argumentos nombrados:", kwargs)
+
+imprimir_datos(1, 2, 3, 4, 5, 99, 100, 493434, nombre="Juan", edad=30, direccion="C/ Honduras", pelo="Pelirrojo")
+                </code></pre>
+            </div>
+
+            <button class="btn btn-sm boton w-60 my-2 d-block" type="button" data-bs-toggle="collapse" data-bs-target="#ejercicio12" aria-expanded="false" aria-controls="ejercicio12">
+                EJERCICIO 12: Funciones, modularidad, lamba, argumentos, decoradores.
+            </button>
+            <div class="collapse" id="ejercicio12">
+                <pre><code>
+# ───────────────────────────────────────────────────────────────
+# FUNCIONES Y MODULARIDAD EN PYTHON
+# ───────────────────────────────────────────────────────────────
+
+'''
+Sintaxis básica de una función:
+
+def nombre_funcion(parámetros):
+# Cuerpo de la función
+return resultado
+
+- def: palabra clave para definir una función
+- nombre_funcion: nombre descriptivo
+- parámetros: variables que recibe la función
+- return: valor que devuelve (opcional)
+'''
+
+# ───────────────────────────────────────────────────────────────
+# FUNCIONES BÁSICAS
+# ───────────────────────────────────────────────────────────────
+
+def saludar_usuario(nombre):
+print(f"Hola, {nombre}")
+
+saludar_usuario("Carlos")
+
+# Parámetros posicionales y nombrados
+
+def mostrar_info(nombre, edad):
+print(f"Nombre: {nombre}, Edad: {edad}")
+
+mostrar_info("Lucía", 25)                         # Posicionales
+mostrar_info(edad=30, nombre="Paco")              # Nombrados
+
+# Valores por defecto en parámetros
+
+def saludar_con_mensaje(nombre, mensaje="Hola"):
+print(f"{mensaje}, {nombre}")
+
+saludar_con_mensaje("Ana")
+saludar_con_mensaje("Ana", "Buenos días")
+
+# Función con return
+
+def sumar(a, b):
+return a + b
+
+print("Suma:", sumar(3, 7))
+
+# ───────────────────────────────────────────────────────────────
+# ARGUMENTOS FLEXIBLES
+# ───────────────────────────────────────────────────────────────
+
+# *args (tupla de argumentos)
+
+def suma_total(*numeros):
+total = 0
+for num in numeros:
+    total += num
+return total
+
+print(suma_total(1, 2, 3, 4))  # 10
+
+# **kwargs (diccionario de argumentos nombrados)
+
+def mostrar_datos(**datos):
+for clave, valor in datos.items():
+    print(f"{clave}: {valor}")
+
+mostrar_datos(nombre="Ana", edad=25, ciudad="Madrid")
+
+# ───────────────────────────────────────────────────────────────
+# ÁMBITO Y FUNCIONES ANIDADAS
+# ───────────────────────────────────────────────────────────────
+
+def operacion(opcion):
+def suma(a, b):
+    return a + b
+def resta(a, b):
+    return a - b
+
+if opcion == "sumar":
+    return suma
+elif opcion == "restar":
+    return resta
+
+f = operacion("sumar")
+print(f(5, 3))  # 8
+f = operacion("restar")
+print(f(5, 3))  # 2
+
+# Ámbito de variables
+
+def saludo_dam1():
+mensaje = "Hola, DAM1"
+print(id(mensaje))
+
+saludo_dam1()
+mensaje = 0
+print(id(mensaje))
+
+# ───────────────────────────────────────────────────────────────
+# FUNCIONES LAMBDA
+# ───────────────────────────────────────────────────────────────
+
+# Lambda para sumar
+suma_lambda = lambda a, b: a + b
+print("Lambda suma:", suma_lambda(5, 3))
+
+# Lambda con map
+numeros = [1, 2, 3, 4, 5]
+dobles = list(map(lambda x: x * 2, numeros))
+print("Dobles:", dobles)
+
+# ───────────────────────────────────────────────────────────────
+# FUNCIONES COMO OBJETOS
+# ───────────────────────────────────────────────────────────────
+
+def saludo():
+return "Hola"
+
+def despedida():
+return "Adiós"
+
+# Asignar función a variable
+accion = saludo
+print(accion())
+
+# Pasar función como parámetro
+def ejecutar_funcion(func):
+print(func())
+
+ejecutar_funcion(despedida)
+
+# ───────────────────────────────────────────────────────────────
+# DECORADORES
+# ───────────────────────────────────────────────────────────────
+
+def decorador(func):
+def nueva_funcion():
+    print("ANTES de la función original")
+    func()
+    print("DESPUÉS de la función original")
+return nueva_funcion
+
+@decorador
+def saludo_decorado():
+print("Hola")
+
+saludo_decorado()
+
+# ───────────────────────────────────────────────────────────────
+# EJERCICIO: LISTA DE NÚMEROS PARES
+# ───────────────────────────────────────────────────────────────
+
+def es_par(num):
+return num % 2 == 0
+
+def numeros_pares(lista):
+return [n for n in lista if es_par(n)]
+
+def obtener_lista():
+lista = []
+while True:
+    entrada = input("Dame números (Termina con 'fin'): ")
+    if entrada.lower() == "fin":
+        break
+    try:
+        numero = int(entrada)
+        lista.append(numero)
+    except ValueError:
+        print("Entrada no válida. Introduce un número o 'fin'.")
+return lista
+
+# Prueba interactiva
+lista_usuario = obtener_lista()
+print(f"La lista original es: {lista_usuario}")
+print("Números pares:", numeros_pares(lista_usuario))
+
+# Prueba directa (sin input)
+print(":::::::::::::::::::::::::::::::::::::::::::")
+listilla = [1, 2, 3, 4, 5, 6]
+print("Números pares en listilla:", numeros_pares(listilla))
+                </code></pre>
+            </div>
+
+            <button class="btn btn-sm boton my-2 d-block" type="button" data-bs-toggle="collapse" data-bs-target="#ejercicio13" aria-expanded="false" aria-controls="ejercicio13">
+                EJERCICIO 13: Listas.
+            </button>
+            <div class="collapse" id="ejercicio13">
+                <pre><code>
+# Métodos útiles para trabajar con LISTAS
+
+# 1. append(item) Añade un elemento al final de la lista
+
+frutas = ["banana", "manzana"]
+frutas.append("naranja")
+print("append():", frutas)   #out: append(): ['banana', 'manzana', 'naranja']
+
+# 2. extend(iterable) Añade todos los elementos de un iterable(puede ser una lista) al final de la lista
+
+frutas = ["banana", "manzana"]
+frutas.extend(["naranja", "kiwi"])
+print("extend():",frutas) #out: extend(): ['banana', 'manzana', 'naranja', 'kiwi tomate']
+
+# 3. insert(index, item) Inserta un elemento en la lista en la posición que indica el índice
+
+frutas = ["manzana", "banana"]
+frutas.insert(1, "plátano")
+print("insert():",frutas) #out: insert(): ['manzana', 'plátano', 'banana']
+
+# 4. remove(item) Elimina el primer elemento especificado de la lista, si no existe, genera un error
+
+frutas = ["manzana", "banana", "naranja"]
+frutas.remove("banana")
+print("remove():",frutas) #out:
+
+# 5. pop([index]). Elimina y devuelve el elemento en la posición especificada por el índice. Si no se especifica un índice, elimina y devuelve el último elemento de la lista.abs
+
+frutas = ["manzana", "banana", "naranja"]
+
+fruit = frutas.pop(0) # Elimina y devuelve el último elemento
+
+print("Elimino el elemento de índice o pos 0:",fruit)
+print("pop():", frutas)
+
+# 6. index(item) Devuelve el índice de la PRIMERA aparación del elemento especificado. Si no lo encuentra, genera un error
+
+frutas = ["manzana", "banana", "naranja", "salvador"]
+indice = frutas.index("salvador")
+print(indice)
+
+# 7. count(item) devuelve el número de veces que aparece un elemento en la lista
+
+frutas = ["manzana", "banana", "naranja", "banana"]
+cantidad = frutas.count("banana")
+print("count():", "Las veces que se repite el item son:", cantidad)
+
+# 8. sort(key=None, reverse=False) Ordena los elementos de la lista en su lugar, modificando la lista original. Se puede especificar una función key para personalizar el orden y un parámetro reserve para ordenar en orden descencente
+
+frutas = ["manzana", "banana", "naranja", "1", "3"]
+frutas.sort()
+print("sort()", frutas)
+
+# 9. reverse() Invierte el orden de los elementos de la lista
+
+frutas = ["manzana", "banana", "naranja"]
+frutas.reverse()
+print("reverse()", frutas)
+
+# 10. clear() Elimina todos los elementos de la lista, dejándola vacía
+
+frutas = ["manzana", "banana", "naranja"]
+frutas.clear()
+print("clear()", frutas)
+print("clear() directo:", frutas.clear())
+
+print(type(frutas))
+print(type(frutas.clear()))
+                </code></pre>
+            </div>
+        </div>
+
+        <!--Segunda relación de ejercicios PY-->
+        <!--Enunciados-->
+        <button class="btn btn-sm boton w-40 my-2" type="button" data-bs-toggle="collapse" data-bs-target="#ejs2" aria-expanded="false" aria-controls="ejs2">
+            ✨Ejercicios de iniciación a Python✨
+        </button>
+
+        <div id="ejs2" class="collapse ms-3">
+            <button class="btn btn-sm boton w-40 my-2" type="button" data-bs-toggle="collapse" data-bs-target="#ejs2enun" aria-expanded="false" aria-controls="ejs2enun">
+                Ver enunciados
+            </button>
+            <div class="collapse" id="ejs2enun">
+                <h3>Ejercicios de iniciación en PYTHON</h3>
+                <h4> 1️⃣ Programa que solicite al usuario que ingrese su nombre.</h4>
+                <div class="mb-3">
+                    <p>El nombre se debe almacenar en una variable llamada nombre. A continuación se debe mostrar en pantalla el texto “Ahora estás en la matrix, [usuario]”, donde “[usuario]” se reemplazará por el nombre que el usuario haya ingresado.</p>
+                    <p>Ejemplo de ejecución:</p>
+                    <p>Tu nombre: Alex</p>
+                    <p>Ahora estás en la matrix, Alex</p>
                 </div>
-                                        
-                <button class="btn btn-sm boton w-60 my-2 d-block" type="button" data-bs-toggle="collapse" data-bs-target="#ejercicio9" aria-expanded="false" aria-controls="ejercicio9">
-                    EJERCICIO 9: Programa que dibuje un triángulo con la altura deseada.
-                </button>
-                <div class="collapse" id="ejercicio9">
-                    <pre><code>
-    # Dibujar un triangulo de asteriscos con altura N
-    # El ejercicio solicita leer un número entero N del teclado para dibujar un triángulo de asteriscos
-    # Se deben definir al menos 3 subprogramas
-    # Ejemplo de Output: Triangulo de altura 4
-    # *
-    # ***
-    # *****
-    # *******
-
-    def dibujar_linea():
-        print("*", end="")
-
-
-    def dibujar_triangulo(n):
-        for i in range(1, n + 1):
-            for j in range(2 * i - 1):
-                dibujar_linea()
-            print()
-
-
-    def main():
-        n = int(input("Introduce la altura del triángulo: "))
-        dibujar_triangulo(n)
-
-
-    main()
-                    </code></pre>
+                <h4> 2️⃣ Programa que solicite al usuario ingresar un número con decimales y almacenarlo en una variable.</h4>
+                <div class="mb-3">
+                    <p>A continuación, el programa debe solicitar al usuario que ingrese un número entero y guardarlo en otra variable. En una tercera variable se deberá guardar el resultado de la suma de los dos números ingresados por el usuario. Por último, se debe mostrar en pantalla el texto “El resultado de la suma es [suma]”, donde “[suma]” se reemplazará por el resultado de la operación.</p>
+                    <p>Ejemplo de ejecución:</p>
+                    <p>Primer número: 14.2</p>
+                    <p>Segundo número: 19</p>
+                    <p>El resultado de la suma es 33.2</p>
                 </div>
+                <div class="mb-3">
+                    <h4> 3️⃣ Programa que solicite al usuario dos números y los almacene en dos variables. En otra variable, almacena el resultado de la suma de esos dos números y luego mostrará ese resultado en pantalla.</h4>
+                    <p>A continuación, el programa debe solicitar al usuario que ingrese un tercer número, el cual se debe almacenar en una nueva variable. Por último, mostrará en pantalla el resultado de la multiplicación de este nuevo número por el resultado de la suma anterior.</p>
+                    <p>Ejemplo de ejecución:</p>
+                    <p>Ingresa un número: 1</p>
+                    <p>Ingresa otro número: 2</p>
+                    <p>Suman: 3</p>
+                    <p>Ingresa un nuevo número: 3</p>
+                    <p>Multiplicación de la suma por el último número: 9</p>
+                </div>
+                <div class="mb-3">
+                    <h4> 4️⃣ Programa que solicite al usuario ingresar la cantidad de kilómetros recorridos por una motocicleta y la cantidad de litros de combustible que consumió durante ese recorrido. Mostrar el consumo de combustible por kilómetro.</h4>
+                    <p>Ejemplo de ejecución:</p>
+                    <p>Kilómetros recorridos: 260</p>
+                    <p>Litros de combustible gastados: 12.5</p>
+                    <p>El consumo por kilómetro es de 20.8</p>
+                </div>
+                <div class="mb-3">
+                    <h4> 5️⃣ Programa que solicite al usuario el ingreso de una temperatura en escala Fahrenheit (debe permitir decimales) y le muestre el equivalente en grados Celsius.</h4>
+                    <p>La fórmula de conversión que se usa para este cálculo es: Celsius = (5/9) * (Fahrenheit-32)</p>
+                    <p>Ejemplo de ejecución:</p>
+                    <p>Ingresa una temperatura expresada en Fahrenheit: 75</p>
+                    <p>23.88888888888889</p>
+                </div>
+                <div class="mb-3">
+                    <h4> 6️⃣ Programa que solicite al usuario ingresar tres números para luego mostrarle el promedio de los tres.</h4>
+                    <p>Ejemplo de ejecución:</p>
+                    <p>Primer número: 8.5</p>
+                    <p>Segundo número: 10</p>
+                    <p>Tercer número: 5.5</p>
+                    <p>El promedio de los tres es 8.0</p>
+                </div>
+                <div class="mb-3">
+                    <h4> 7️⃣ Programa que solicite al usuario un número y le reste el 15%, almacenando todo en una única variable. A continuación, mostrar el resultado final en pantalla.</h4>
+                    <p>Ejemplo de ejecución:</p>
+                    <p>Ingresa un número: 260</p>
+                    <p>Descontando el 15% queda: 221.0</p>
+                </div>
+            </div>
+        </div>
+        <!--Ejercicios-->
+        <div id="ejs2" class="collapse ms-3">
+            <button class="btn btn-sm boton w-40 my-2" type="button" data-bs-toggle="collapse" data-bs-target="#ejs2res" aria-expanded="false" aria-controls="ejs2res">
+                Ver ejercicios resueltos
+            </button>
+            <div class="collapse" id="ejs2res">
+                <pre><code>
+# Ejercicio1
+name=input('introduce tu nombre')
+print("Ahora estás en la matrix", name)
+
+# Ejercicio2
+num=float(input("introduce un número con decimales"))
+num2=int(input("Introduce un número entero"))
+float(num2) #en python no hace falta hacer la conversión, detecta el float
+suma=num+num2
+print("Resultado",suma)
+
+# Ejercicio3
+num1=float(input("Introduce un número"))
+num2=float(input("Introduce otro número"))
+print("Resultado de la suma de los números",num1+num2)
+num3=float(input("Introduce otro número"))
+print("El resultado de la multiplicación del tercer número por la suma anterior es: ",num3*(num1+num2))
+
+# Ejercicio4
+km=float(input("Introduce los km recorridos: "))
+litros=float(input("Introduce los litros de combustibles consumidos: "))
+resultado=litros/km
+print("El consumo de combustible por kilómetro es de: ",resultado,"l/km")
+
+# Ejercicio5
+fahrenheit=float(input("Introduce una temperatura en Fahrenheit: "))
+celsius=(fahrenheit-32)/(9/5)
+print("El equivalente en grados Celsius es de: ",celsius)
+
+# Ejercicio6
+num1=float(input("Ingresa un número: "))
+num2=float(input("Ingresa un número: "))
+num3=float(input("Ingresa un número: "))
+print("La media de los tres es de: ",(num1+num2+num3)/3)
+
+# Ejercicio7
+num=float(input("Introduce un número: "))
+print("Con la deducción del 15% resulta en: ",num*0.85)
+                </code></pre>
             </div>
         </div>
     </div>
