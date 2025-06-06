@@ -1,0 +1,138 @@
+<pre><code>
+#Ejercicio 1.
+num=float(input("Introduzca un número: "))
+if num > 0:
+    print("El número es positivo.")
+elif num==0:
+    print("El número es cero.")
+elif num<0:
+    print("El número es negativo.")
+
+#Ejercicio 2.
+num1=int(input("Introduzca un número entero: "))
+if num1%2==0:
+    print("El número es par.")
+else:
+    print("El número es impar.")
+
+#Ejercicio 3.
+num2=1
+while num2<=10:
+    print(num2)
+    num2+=1
+
+#Ejercicio 4.
+num3=0
+
+for i in range(1, 101):
+    num3+=i
+print(num3)
+
+#Ejercicio 5.
+letra=input("Introduzca una letra: ")
+if letra=="a" or letra=="e" or letra=="i" or letra=="o" or letra=="u":
+    print("Es una vocal.")
+else:
+    print("El caracter introducido no es una vocal.")
+
+#Ejercicio 6.
+num4=int(input("Introduce un número para ver su tabla de multiplicar: "))
+for i in range(1,11):
+    print(f"2x{i}={num4*i}\n")
+
+#Ejercicio 7.
+contador_negativos = 0
+while True:
+    numero = int(input("Introduce números negativos: "))
+    if numero == 0:
+        break
+    if numero < 0:
+        contador_negativos += 1
+
+print(f"Cantidad de números negativos: {contador_negativos}")
+
+#Ejercicio 8.
+numero1=int(input("Introduce un primer número: "))
+numero2=int(input("Introduce un segundo número: "))
+for i in range(numero1,numero2):
+    i+=i%2!=0
+    print(f"Los números impares que hay del número {numero1} al {numero2} son: {i}")
+
+#Ejercicio 9.
+contraseña_correcta = "monsterblanco"
+ingreso = input("Contraseña: ")
+
+while ingreso != contraseña_correcta:
+    print("Incorrecta. Intenta de nuevo.")
+    ingreso = input("Contraseña: ")
+
+print("Contraseña correcta.")
+
+#Ejercicio 10.
+num5 = int(input("Ingresa un número: "))
+if num5 < 0:
+    print("El número debe ser positivo.")
+else:
+    factorial = 1
+    for i in range(1, num5 + 1):
+        factorial *= i
+    print(f"El factorial de {num5} es {factorial}")
+
+#Ejercicio 11.
+# Solicita los extremos del rango
+inicio = int(input("Primer número: "))
+fin = int(input("Segundo número: "))
+print(f"Números primos entre {inicio} y {fin}:")
+# Función para verificar si un número es primo
+def es_primo(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+# Recorre el rango y muestra los números primos
+for numm in range(inicio, fin + 1):
+    if es_primo(numm):
+        print(numm, end=", ")
+
+#Ejercicio 12.
+num6 = input("Ingresa un número: ")
+# Suma los dígitos convirtiendo cada carácter a entero
+suma = sum(int(digito) for digito in num6 if digito.isdigit())
+print(f"La suma de sus dígitos es: {suma}")
+
+#Ejercicio 13.
+import random
+# Genera un número aleatorio entre 1 y 100
+numero_secreto = random.randint(1, 100)
+# Bucle hasta que el usuario adivine correctamente
+while True:
+    intento = int(input("Adivina el número (entre 1 y 100): "))
+    if intento < numero_secreto:
+        print("Es mayor...")
+    elif intento > numero_secreto:
+        print("Es menor...")
+    else:
+        print(f"¡Correcto! El número era {numero_secreto}")
+        break
+
+#Ejercicio 14.
+num7 = int(input("Cantidad de números a mostrar: "))
+fibonacci = []
+a, b = 0, 1
+for _ in range(num7):
+    fibonacci.append(a)
+    a, b = b, a + b
+print("Serie de Fibonacci:", ", ".join(map(str, fibonacci)))
+
+#Ejercicio 15.
+triangulo = int(input("Ingresa un número: "))
+
+for i in range(1, triangulo + 1):
+    # Imprime números del 1 hasta i en cada fila
+    for j in range(1, i + 1):
+        print(j, end="")
+    print()  # Salto de línea después de cada fila
+
+</code></pre>
