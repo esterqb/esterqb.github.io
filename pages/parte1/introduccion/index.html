@@ -1,0 +1,240 @@
+<h4 id="tema-1-1-1" class="my-4">1.1.1.Problemas, algoritmos y programas.</h4>
+<p>Un algoritmo es una secuencia de acciones que se realizan para resolver un problema. La tarea de programar en realidad se trata de resolver problemas. La programación se encarga de resolver problemas a través de algoritmos. El algoritmo debe especificar las acciones que se deben ejecutar y en qué orden deben ejecutarse. Un algoritmo es independiente del lenguaje de programación. Es decir, una vez tengamos un algoritmo que resuelve un problema, podemos aplicarlo sobre cualquier lenguaje de programación. Un programa es un algoritmo escrito con las sentencias específicas de un lenguaje de programación concreto. Un algoritmo recibe información de entrada, la procesa, y genera información de salida.</p>
+<p>No todos los problemas pueden resolverse utilizando un ordenador. Solo se podrán resolver aquellos problemas que tengan una solución mecánica. Es decir, aquellos que se resuelvan por medio de una secuencia de instrucciones determinada. Son los denominados problemas computacionales o algorítmicos. Como por ejemplo, los relacionados con el cálculo numérico, el tratamiento de palabras, o la representación gráfica. Un ejemplo de problema computacional podría ser obtener el área de un cuadrado a partir de su lado. En cambio, un problema no computacional podría ser averiguar el color favorito de una persona a partir de su nombre.</p>
+
+<h4 id="tema-1-1-2" class="my-4">1.1.2.Programas y programar.</h4>
+<p>La tarea de la programación en aplicaciones reales de una cierta envergadura es bastante compleja. Según la complejidad del problema a resolver podemos hablar de:</p>
+<ul class="list-group">
+    <li class="list-group-item">Programación a escala reducida: número reducido de líneas de programa, intervención de una sola persona. Por ejemplo, un programa para ordenar números.</li>
+    <li class="list-group-item">Programación a gran escala: muchas líneas de programa, equipo de programadores. Por ejemplo, el desarrollo de una sistema operativo.</li>
+</ul>
+<p>Los programas tienen un ciclo de vida en el que se distinguen dos etapas: desarrollo y mantenimiento.</p>
+
+<h4 id="tema-1-1-3" class="my-4">1.1.3.Lenguajes y modelos de programación.</h4>
+<p>A nivel máquina, un programa es una sucesión de palabras expresadas en código binario (secuencia de 0s y 1s), en posiciones consecutivas de memoria que representan instrucciones o datos. Es el lenguaje máquina. Es evidente que los programas escritos en lenguaje máquina resultan ilegibles.</p>
+<p>Los lenguajes ensambladores hacen uso de mnemotécnicos e identificadores para instrucciones y datos.</p>
+<p>Ambos son lenguajes tan próximos a la máquina que se denominan lenguajes de bajo nivel.</p>
+<p>Frente a los lenguajes de bajo nivel, se encuentran los lenguajes de alto nivel:</p>
+<ul class="list-group list-group-flush">
+    <li class="list-group-item">Disponen de operadores y estructuras más próximas al lenguaje humano, esto permite al programador construir instrucciones de forma más sencilla.</li>
+    <li class="list-group-item">Son más seguros que el código máquina y ayudan a no cometer errores evidentes.</li>
+    <li class="list-group-item">El código es transportable (independiente de la máquina).</li>
+    <li class="list-group-item">El código es más legible.</li>
+</ul>
+
+<h4 id="tema-1-1-4" class="my-4">1.1.4.Compiladores e intérpretes.</h4>
+<p>Hay dos formas de traducir un programa escrito en un lenguaje de alto nivel al lenguaje máquina: interpretar y compilar.</p>
+<p>En la interpretación se traduce a lenguaje máquina cada instrucción de manera individual en tiempo de ejecución (de una en una).</p>
+<p>En la compilación se traducen de manera global todas las instrucciones por medio de un programa (compilador). En los lenguajes compilados se debe hacer siempre una compilación previa para poder ejecutar el programa resultante.</p>
+
+<h3 id="tema-1-2" class="my-4">1.2.Representación de algoritmos.</h3>
+<p>Para representar un algoritmo se suele utilizar algún método que permite independizarlo del lenguaje de programación utilizado. Esto nos permitirá codificar más tarde a través de cualquier lenguaje de programación. Existen diversas técnicas, podemos destacar:</p>
+<ul class="list-group list-group-flush">
+    <li class="list-group-item">Diagramas de flujo (ordinogramas) Utilizan símbolos gráficos estándar y escriben los pasos del algoritmo dentro de los símbolos. A través de las líneas de flujo se indican la secuencia en que se deben ejecutar.</li>
+    <li class="list-group-item">Lenguajes de descripción de algoritmos (Pseudocódigo).</li>
+</ul>
+
+<h5 id="tema-1-2-2-1" class="my-4">Pseudocódigo.</h5>
+<p>Es un lenguaje para la descripción de algoritmos que procura mantener las propiedades de los diagramas de flujo: sencillez, claridad, normalización y flexibilidad. Su notación se basa en el lenguaje natural. La estructura general del pseudocódigo está dividida en dos partes:</p>
+<ul class="list-group list-group-flush">
+    <li class="list-group-item">Nombre y entorno del programa: tipos, nombre de las variables y constantes que se utilizan.</li>
+    <li class="list-group-item">Desarrollo ordenado y estructurado del algoritmo: esta segunda parte se corresponde con el diagrama de flujo.</li>
+</ul>
+
+<h3 id="tema-1-2-3" class="my-4">1.2.3.Elementos de un algoritmo.</h3>
+<p>Un algoritmo está formado por:</p>
+<ol>
+    <li class="list-group-item">Datos: son los valores que describen los objetos con los que opera un ordenador, como pueden ser números o texto. Los datos se almacenan en variables y constantes. Los datos pueden ser de tipo: entero, real, texto y boolean. Representan cantidades numéricas, cadenas de texto y valores (verdadero o falso). Los datos se guardan en variables, que son espacios de memoria reservados para almacenar un tipo de datos.</li>
+    <li class="list-group-item">Expresiones: es una combinación de constantes, variables, operadores, paréntesis y nombres de funciones. Las expresiones pueden ser aritméticas o lógicas.
+        <ol>
+            <li class="list-group-item">Las expresiones aritméticas tendrán resultado numérico, y tienen operandos (con constantes y variables numéricas) y operadores (aritméticos).
+                <table class="table table-bordered table-hover text-center">
+                    <thead>
+                        <tr>
+                            <th>Operador</th>
+                            <th>Operación</th>
+                            <th>Operador</th>
+                            <th>Operación</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>+</td>
+                            <td>Suma o signo</td>
+                            <td>+=</td>
+                            <td>Suma y asignación</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>Resta o signo</td>
+                            <td>-=</td>
+                            <td>Resta y asignación</td>
+                        </tr>
+                        <tr>
+                            <td>*</td>
+                            <td>Multiplicación</td>
+                            <td>*=</td>
+                            <td>Multiplicación y asignación</td>
+                        </tr>
+                        <tr>
+                            <td>/</td>
+                            <td>División</td>
+                            <td>/=</td>
+                            <td>División y asignación</td>
+                        </tr>
+                        <tr>
+                            <td>%</td>
+                            <td>Módulo</td>
+                            <td>%=</td>
+                            <td>Módulo y asignación</td>
+                        </tr>
+                        <tr>
+                            <td>++</td>
+                            <td>Incremento en 1</td>
+                            <td>--</td>
+                            <td>Decremento en 1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li class="list-group-item">El resultado de las expresiones lógicas será de tipo booleando (verdadero o falso). Estas operaciones están formadas por: 
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Operandos: contantes, variables y expresiones lógicas.</li>
+                    <li class="list-group-item">Operadores relacionales:
+                        <table class="table table-bordered text-center">
+                            <thead>
+                                <tr>
+                                <th>Operador</th>
+                                <th>Operación</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <td>==</td>
+                                <td>Igual</td>
+                                </tr>
+                                <tr>
+                                <td>!=</td>
+                                <td>Distinto</td>
+                                </tr>
+                                <tr>
+                                <td>&gt;</td>
+                                <td>Mayor que</td>
+                                </tr>
+                                <tr>
+                                <td>&lt;</td>
+                                <td>Menor que</td>
+                                </tr>
+                                <tr>
+                                <td>&gt;=</td>
+                                <td>Mayor o igual que</td>
+                                </tr>
+                                <tr>
+                                <td>&lt;=</td>
+                                <td>Menor o igual que</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                    <li class="list-group-item">Las expresiones pueden agruparse a través de operadores lógicos. Este tipo de operadores se utilizan para hacer varias comprobaciones de forma conjunta, dichas expresiones pueden utilizar:
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Operandos: constantes, variables y expresiones lógicas.</li>
+                            <li class="list-group-item">Operadores relacionales.</li>
+                            <li class="list-group-item">Operadores lógicos (not, and, or, xor).
+                                <table class="table table-bordered text-center">
+                                    <thead class="table-light">
+                                        <tr>
+                                        <th>Operador</th>
+                                        <th>Operación</th>
+                                        <th>Significado</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                        <td>!</td>
+                                        <td>NOT</td>
+                                        <td>Negación lógica</td>
+                                        </tr>
+                                        <tr>
+                                        <td>&&</td>
+                                        <td>AND</td>
+                                        <td>Conjunción lógica (Y lógico)</td>
+                                        </tr>
+                                        <tr>
+                                        <td>||</td>
+                                        <td>OR</td>
+                                        <td>Disyunción (O lógico)</td>
+                                        </tr>
+                                        <tr>
+                                        <td>^</td>
+                                        <td>XOR</td>
+                                        <td>Disyunción Exclusiva (XOR)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table class="table table-bordered text-center">
+                                    <thead class="table-light">
+                                        <tr>
+                                        <th>x</th>
+                                        <th>y</th>
+                                        <th>x && y</th>
+                                        <th>x || y</th>
+                                        <th>x ^ y</th>
+                                        <th>!x</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                        <td>false</td>
+                                        <td>false</td>
+                                        <td>false</td>
+                                        <td>false</td>
+                                        <td>false</td>
+                                        <td>true</td>
+                                        </tr>
+                                        <tr>
+                                        <td>false</td>
+                                        <td>true</td>
+                                        <td>false</td>
+                                        <td>true</td>
+                                        <td>true</td>
+                                        <td>true</td>
+                                        </tr>
+                                        <tr>
+                                        <td>true</td>
+                                        <td>false</td>
+                                        <td>false</td>
+                                        <td>true</td>
+                                        <td>true</td>
+                                        <td>false</td>
+                                        </tr>
+                                        <tr>
+                                        <td>true</td>
+                                        <td>true</td>
+                                        <td>true</td>
+                                        <td>true</td>
+                                        <td>false</td>
+                                        <td>false</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </li>
+    <li class="list-group-item">Instrucciones: acciones básicas que implementan los algoritmos, como leer o escribir en variables.</li>
+</ol>
+
+<h3 id="tema-1-3" class="my-4">1.3.Instrucciones en pseudocódigo.</h3>
+<p>Las instrucciones se clasifican en:</p>
+<ul class="list-group list-group-flush">
+    <li class="list-group-item">Declarativas: anuncian el uso de variables y constantes, se debe indicar el nombre de la variable y el tipo de dato que contendrá.</li>
+    <li class="list-group-item">Primitivas: las ejecuta el procesador de manera inmediata; no dependen de ningún otro objeto o condición. Las operaciones de entrada leen valores y los asignan a un identificador en memoria, las de salida envían datos a un dispositivo desde la memoria, y las de asignación obtienen el resultado de una expresión y la guarda en un identificador en memoria.</li>
+    <li class="list-group-item">Control: evalúan expresiones lógicas para controlar la ejecución de otras instrucciones o alterar el orden de ejecución normal (ejecución secuencial). Hay alternativas (ejecutan una instrucción o conjunto de instrucciones después de evaluar una condición) y repetitivas (el bloque de código puede ejecutarse más de una vez).</li>
+</ul>
+
+<h5 id="bibliografia-intro" class="my-4">Bibliografía.</h5>
+<p>Material de Edu Torregrosa Llácer (aulaenlanube.com)</p>
