@@ -1,0 +1,23 @@
+<pre><code>
+#Crea un programa que pida un número 1 y un número 2 e indique los números primos entre el num1 y num2
+def es_primo(n):
+    if n < 2:
+        return False
+
+    for i in range(2, n):
+        if n % i == 0:
+            return False
+
+    return True
+
+
+num1 = int(input("Introduce un nº: "))
+num2 = int(input("Introduce otro nº: "))
+
+primos = []
+for i in range(num1, num2):
+    if es_primo(i):
+        primos.append(i)
+
+print(f"Lista de números primos desde {num1} hasta {num2}: {primos}")
+</code></pre>

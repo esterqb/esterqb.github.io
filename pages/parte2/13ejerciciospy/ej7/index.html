@@ -1,0 +1,29 @@
+<pre><code>
+# Ejercicio que solicita leer dos números enteros de teclado y sumar todos los números pares en el intervalo. También se debe definir un procedimiento para la lectura correcta del intervalo y una función para calcular la suma.
+
+def leer_intervalo():
+    a = int(input("Primer número: "))
+    b = int(input("Segundo número: "))
+    while (a > b):
+        print("El primer número debe ser menor")
+        a = int(input("Primer número: "))
+        b = int(input("Segundo número: "))
+    return a, b
+
+
+def suma_pares(a, b):
+    suma = 0
+    for i in range(a, b + 1):
+        if i % 2 == 0:
+            suma += i
+    return suma
+
+
+def main():
+    a, b = leer_intervalo()
+    resultado = suma_pares(a, b)
+    print(f"La suma de los números pares entre {a} y {b} es: {resultado}")
+
+
+main()
+</code></pre>

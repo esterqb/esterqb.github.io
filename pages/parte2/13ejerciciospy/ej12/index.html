@@ -1,0 +1,185 @@
+<pre><code>
+# ───────────────────────────────────────────────────────────────
+# FUNCIONES Y MODULARIDAD EN PYTHON
+# ───────────────────────────────────────────────────────────────
+
+'''
+Sintaxis básica de una función:
+
+def nombre_funcion(parámetros):
+# Cuerpo de la función
+return resultado
+
+- def: palabra clave para definir una función
+- nombre_funcion: nombre descriptivo
+- parámetros: variables que recibe la función
+- return: valor que devuelve (opcional)
+'''
+
+# ───────────────────────────────────────────────────────────────
+# FUNCIONES BÁSICAS
+# ───────────────────────────────────────────────────────────────
+
+def saludar_usuario(nombre):
+print(f"Hola, {nombre}")
+
+saludar_usuario("Carlos")
+
+# Parámetros posicionales y nombrados
+
+def mostrar_info(nombre, edad):
+print(f"Nombre: {nombre}, Edad: {edad}")
+
+mostrar_info("Lucía", 25)                         # Posicionales
+mostrar_info(edad=30, nombre="Paco")              # Nombrados
+
+# Valores por defecto en parámetros
+
+def saludar_con_mensaje(nombre, mensaje="Hola"):
+print(f"{mensaje}, {nombre}")
+
+saludar_con_mensaje("Ana")
+saludar_con_mensaje("Ana", "Buenos días")
+
+# Función con return
+
+def sumar(a, b):
+return a + b
+
+print("Suma:", sumar(3, 7))
+
+# ───────────────────────────────────────────────────────────────
+# ARGUMENTOS FLEXIBLES
+# ───────────────────────────────────────────────────────────────
+
+# *args (tupla de argumentos)
+
+def suma_total(*numeros):
+total = 0
+for num in numeros:
+    total += num
+return total
+
+print(suma_total(1, 2, 3, 4))  # 10
+
+# **kwargs (diccionario de argumentos nombrados)
+
+def mostrar_datos(**datos):
+for clave, valor in datos.items():
+    print(f"{clave}: {valor}")
+
+mostrar_datos(nombre="Ana", edad=25, ciudad="Madrid")
+
+# ───────────────────────────────────────────────────────────────
+# ÁMBITO Y FUNCIONES ANIDADAS
+# ───────────────────────────────────────────────────────────────
+
+def operacion(opcion):
+def suma(a, b):
+    return a + b
+def resta(a, b):
+    return a - b
+
+if opcion == "sumar":
+    return suma
+elif opcion == "restar":
+    return resta
+
+f = operacion("sumar")
+print(f(5, 3))  # 8
+f = operacion("restar")
+print(f(5, 3))  # 2
+
+# Ámbito de variables
+
+def saludo_dam1():
+mensaje = "Hola, DAM1"
+print(id(mensaje))
+
+saludo_dam1()
+mensaje = 0
+print(id(mensaje))
+
+# ───────────────────────────────────────────────────────────────
+# FUNCIONES LAMBDA
+# ───────────────────────────────────────────────────────────────
+
+# Lambda para sumar
+suma_lambda = lambda a, b: a + b
+print("Lambda suma:", suma_lambda(5, 3))
+
+# Lambda con map
+numeros = [1, 2, 3, 4, 5]
+dobles = list(map(lambda x: x * 2, numeros))
+print("Dobles:", dobles)
+
+# ───────────────────────────────────────────────────────────────
+# FUNCIONES COMO OBJETOS
+# ───────────────────────────────────────────────────────────────
+
+def saludo():
+return "Hola"
+
+def despedida():
+return "Adiós"
+
+# Asignar función a variable
+accion = saludo
+print(accion())
+
+# Pasar función como parámetro
+def ejecutar_funcion(func):
+print(func())
+
+ejecutar_funcion(despedida)
+
+# ───────────────────────────────────────────────────────────────
+# DECORADORES
+# ───────────────────────────────────────────────────────────────
+
+def decorador(func):
+def nueva_funcion():
+    print("ANTES de la función original")
+    func()
+    print("DESPUÉS de la función original")
+return nueva_funcion
+
+@decorador
+def saludo_decorado():
+print("Hola")
+
+saludo_decorado()
+
+# ───────────────────────────────────────────────────────────────
+# EJERCICIO: LISTA DE NÚMEROS PARES
+# ───────────────────────────────────────────────────────────────
+
+def es_par(num):
+return num % 2 == 0
+
+def numeros_pares(lista):
+return [n for n in lista if es_par(n)]
+
+def obtener_lista():
+lista = []
+while True:
+    entrada = input("Dame números (Termina con 'fin'): ")
+    if entrada.lower() == "fin":
+        break
+    try:
+        numero = int(entrada)
+        lista.append(numero)
+    except ValueError:
+        print("Entrada no válida. Introduce un número o 'fin'.")
+return lista
+
+# Prueba interactiva
+lista_usuario = obtener_lista()
+print(f"La lista original es: {lista_usuario}")
+print("Números pares:", numeros_pares(lista_usuario))
+
+# Prueba directa (sin input)
+print(":::::::::::::::::::::::::::::::::::::::::::")
+listilla = [1, 2, 3, 4, 5, 6]
+print("Números pares en listilla:", numeros_pares(listilla))
+</code></pre>

@@ -1,0 +1,15 @@
+<pre><code>
+# Crea una función que reciba una cadena de texto y cuente cuántas palabras tiene.
+
+def contar_palabras(cadena):
+palabras = cadena.split()
+return len(palabras)
+
+# Ejemplo de uso
+cadena = "En un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho tiempo que vivía un hidalgo de los de lanza en astillero, adarga antigua, rocín flaco y galgo corredor."
+print(contar_palabras(cadena))
+
+# Probando el Ej2 con un texto introducido por el usuario
+text2 = input("Introduce un texto: ")
+print(f"El texto {text2} tiene: {contar_palabras(text2)} palabras")
+</code></pre>
