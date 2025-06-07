@@ -1,0 +1,95 @@
+<pre><code>
+<h5>Ejercicio 1</h5>
+nombres = []
+print("Ingresa 5 nombres:")
+for i in range(5):
+    nombre = input(f"Nombre {i + 1}: ")
+    nombres.append(nombre)
+
+print("\nNombres ingresados:")
+print(nombres)
+
+<h5>Ejercicio 2</h5>
+while True:
+    entrada = input("Ingresa un número entero positivo: ")
+    if entrada.isdigit():
+        numero = int(entrada)
+        if numero > 0:
+            print(f"Número válido ingresado: {numero}")
+            break
+        else:
+            print("El número debe ser mayor que cero.")
+    else:
+        print("Entrada inválida. Debes ingresar un número entero positivo.")
+
+<h5>Ejercicio 3</h5>
+palabras = input("Escribe varias palabras separadas por espacios: ").split()
+conteo = {}
+
+for palabra in palabras:
+    conteo[palabra] = conteo.get(palabra, 0) + 1
+
+print("\nOcurrencias de cada palabra:")
+for palabra, cantidad in conteo.items():
+    print(f"{palabra}: {cantidad}")
+
+<h5>Ejercicio 4</h5>
+notas = {}
+print("Ingresa las notas de hasta 5 estudiantes:")
+
+for i in range(5):
+    nombre = input(f"Nombre del estudiante {i + 1}: ")
+    while True:
+        nota_input = input(f"Nota de {nombre}: ")
+        try:
+            nota = float(nota_input)
+            notas[nombre] = nota
+            break
+        except ValueError:
+            print("Nota inválida. Ingresa un número.")
+
+print("\nNotas de los estudiantes:")
+for estudiante, nota in notas.items():
+    print(f"{estudiante}: {nota}")
+
+promedio = sum(notas.values()) / len(notas)
+print(f"\nPromedio de notas: {promedio:.2f}")
+
+<h5>Ejercicio 5</h5>
+ingredientes_disponibles = ["queso", "tomate", "jamón", "champiñones", "aceitunas", "cebolla", "piña", "pimiento"]
+seleccionados = []
+
+print("Ingredientes disponibles:")
+print(", ".join(ingredientes_disponibles))
+
+while len(seleccionados) < 5:
+    ingr = input(f"Selecciona un ingrediente ({len(seleccionados)+1}/5): ").lower()
+    if ingr in ingredientes_disponibles and ingr not in seleccionados:
+        seleccionados.append(ingr)
+    elif ingr in seleccionados:
+        print("Ya seleccionaste ese ingrediente.")
+    else:
+        print("Ingrediente no disponible.")
+
+print("\nIngredientes seleccionados para tu pizza:")
+print(", ".join(seleccionados))
+
+<h5>Ejercicio 6</h5>
+personas = []
+print("Ingresa nombres de personas. Escribe 'fin' para terminar:")
+
+while True:
+    nombre = input("Nombre: ")
+    if nombre.lower() == "fin":
+        break
+    personas.append(nombre)
+
+buscar = input("\n¿A quién deseas buscar?: ")
+
+if buscar in personas:
+    posicion = personas.index(buscar)
+    print(f"{buscar} está en la lista en la posición {posicion}.")
+else:
+    print(f"{buscar} no se encontró en la lista.")
+
+</code></pre>

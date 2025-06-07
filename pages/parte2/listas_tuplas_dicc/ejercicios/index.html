@@ -1,0 +1,115 @@
+<pre><code>
+<h5>utilidades.py</h5>
+def ordenar_lista(lista):
+return sorted(lista)
+
+<h5>filtrado.py</h5>
+def filtrar_pares(lista):
+return [num for num in lista if num % 2 == 0]
+
+<h5>listas_util.py</h5>
+import random
+
+def eliminar_duplicados(lista):
+    return list(set(lista))
+
+def generar_lista_aleatoria(tamano, minimo=1, maximo=100):
+    return [random.randint(minimo, maximo) for _ in range(tamano)]
+
+def encontrar_maximo(lista):
+    return max(lista)
+
+def encontrar_minimo(lista):
+    return min(lista)
+
+<h5>tuplas_util.py</h5>
+def crear_lista_tuplas(lista):
+    return list(enumerate(lista))
+
+def contar_elementos_tupla(tupla, elemento):
+    return tupla.count(elemento)
+
+<h5>diccionarios_util.py</h5>
+def crear_diccionario(claves, valores):
+    return dict(zip(claves, valores))
+
+def contar_ocurrencias_lista(lista):
+    conteo = {}
+    for num in lista:
+        conteo[num] = conteo.get(num, 0) + 1
+    return conteo
+
+def revertir_diccionario(diccionario):
+    return {v: k for k, v in diccionario.items()}
+
+<h5>texto_util.py</h5>
+def contar_palabras(texto):
+    palabras = texto.split()
+    conteo = {}
+    for palabra in palabras:
+        conteo[palabra] = conteo.get(palabra, 0) + 1
+    return conteo
+
+<h5>ordernar.py</h5>
+def ordenar_lista(lista):
+    return sorted(lista)
+
+<h5>main.py</h5>
+from utilidades import ordenar_lista as ordenar_util
+from filtrado import filtrar_pares
+from listas_util import eliminar_duplicados, generar_lista_aleatoria, encontrar_maximo, encontrar_minimo
+from tuplas_util import crear_lista_tuplas, contar_elementos_tupla
+from diccionarios_util import crear_diccionario, contar_ocurrencias_lista, revertir_diccionario
+from texto_util import contar_palabras
+from ordenar import ordenar_lista as ordenar_ordenar
+
+# 1 Ordenar una lista
+lista1 = [5, 3, 8, 1, 2]
+print(ordenar_util(lista1))
+
+# 2 Filtrar pares
+lista2 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+print(filtrar_pares(lista2))
+
+# 3 Eliminar duplicados
+lista3 = [1, 2, 2, 3, 4, 4, 5]
+print(eliminar_duplicados(lista3))
+
+# 4 Desempaquetar tuplas
+def desempaquetar_tupla(tupla):
+    return tupla  # retorna los tres elementos para desempaquetar
+
+tupla = (10, 20, 30)
+a, b, c = desempaquetar_tupla(tupla)
+print(a, b, c)
+
+# 5 Crear lista de tuplas
+lista5 = ['a', 'b', 'c', 'd']
+print(crear_lista_tuplas(lista5))
+
+# 6 Contar elementos en tupla
+tupla6 = (1, 2, 3, 1, 2, 1)
+print(contar_elementos_tupla(tupla6, 1))
+
+# 7 Crear diccionario
+claves = ['nombre', 'edad', 'ciudad']
+valores = ['Carlos', 25, 'Madrid']
+print(crear_diccionario(claves, valores))
+
+# 8 Contar ocurrencias de palabras
+texto = "hola hola adios hola"
+print(contar_palabras(texto))
+
+# 9 Revertir diccionario
+diccionario = {'a': 1, 'b': 2, 'c': 3}
+print(revertir_diccionario(diccionario))
+
+# 99 Proyecto Final Modularizado
+print("\n--- Proyecto Final ---")
+lista_random = generar_lista_aleatoria(20)
+print("Lista aleatoria:", lista_random)
+print("Máximo:", encontrar_maximo(lista_random))
+print("Mínimo:", encontrar_minimo(lista_random))
+print("Ocurrencias:", contar_ocurrencias_lista(lista_random))
+print("Lista ordenada:", ordenar_ordenar(lista_random))
+</code></pre>

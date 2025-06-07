@@ -1,0 +1,174 @@
+<pre><code>
+ingredientes_disponibles = ["Tomate", "Queso", "Nata", "Cebolla", "Pollo", "Huevo", "Salami", "Anchoa", "Bacon",
+                            "Gamba"]
+
+
+def inicializar_pizzeria():
+    pizzeria = {
+        "numerodepedidos": 0,
+        "codigodepedidos": 1,
+        "listadepedidos": []
+    }
+    return pizzeria
+
+
+def agregar_pedido(pizzeria):
+    if pizzeria["numerodepedidos"] >= 20:
+        print("La pizzeria está al completo.")
+        return pizzeria
+
+    nombre = input("Introduce el nombre del cliente: ")
+    telefono = input("Introduce el número de teléfono del cliente: ")
+
+    print("Selecciona los ingredientes (máximo 10 ingredientes):")
+    cont = 0
+    for i in ingredientes_disponibles:
+        print(f"{cont}. {i}")
+        cont += 1
+
+    ingredientes = []
+    while len(ingredientes) < 10:
+        try:
+            seleccion = int(input("Selecciona el número del ingrediente (0-9), o -1 para terminar: "))
+            if seleccion == -1:
+                break
+            if seleccion < 0 or seleccion > 9:
+                print("Número no válido. Debe estar entre 0 y 9.")
+            elif ingredientes_disponibles[seleccion] in ingredientes:
+                print(f"Ya has seleccionado {ingredientes_disponibles[seleccion]}. Elige otro ingrediente.")
+            else:
+                ingredientes.append(ingredientes_disponibles[seleccion])
+                print(f"Ha añadido {ingredientes_disponibles[seleccion]}")
+        except ValueError:
+            print("Entrada no válida. Debes ingresar un número")
+
+    nuevo_pedido = {
+        "nombre": nombre,
+        "telefono": telefono,
+        "codigo de pedido": pizzeria["codigodepedidos"],
+        "numero de ingredientes": len(ingredientes),
+        "ingredientes": ingredientes
+    }
+
+    pizzeria["listadepedidos"].append(nuevo_pedido)
+    pizzeria["numerodepedidos"] += 1
+    pizzeria['codigodepedidos'] += 1
+
+    print(f"Pedido de {nombre} agregado con éxito.")
+
+    return pizzeria
+
+
+def eliminar_pedido(pizzeria):
+    codigo = int(input("Introduce el código del pedido a eliminar: "))
+    for pedido in pizzeria['listadepedidos']:
+        if pedido['codigodepedidos'] == codigo:
+            pizzeria['listadepedidos'].remove(pedido)
+            pizzeria['numerodepedidos'] -= 1
+            print(f"Pedido con código {codigo} eliminado con éxito.")
+            return pizzeria
+    print(f"No se encontró un pedido con el código {codigo}.")
+    return pizzeria
+
+
+# Función para buscar un pedido por el nombre del cliente
+def buscar_pedido_por_nombre(pizzeria):
+    nombre = input("Introduce el nombre del cliente: ")
+    for i in pizzeria['listadepedidos']:
+        if i['nombre'] == nombre:
+            print(f"Pedido encontrado: {i}")
+            return
+    print(f"No se encontró un pedido para el cliente {nombre}.")
+
+
+# Función para determinar el ingrediente más solicitado. Version1
+def ingrediente_preferido(pizzeria):
+    conteo_ingredientes = {}
+
+    for pedido in pizzeria['listadepedidos']:
+        for ingrediente in pedido['ingredientes']:
+            # Incrementar el conteo del ingrediente en el diccionario
+            if ingrediente in conteo_ingredientes:
+                conteo_ingredientes[ingrediente] += 1
+            else:
+                conteo_ingredientes[ingrediente] = 1
+
+    ingrediente_favorito = max(conteo_ingredientes, key=conteo_ingredientes.get)
+
+    print(f"El ingrediente más solicitado es: {ingrediente_favorito}")
+
+
+# Función para determinar el ingrediente más solicitado. Version2
+def ingrediente_preferido2(pizzeria):
+    conteo_ingredientes = [0] * len(ingredientes_disponibles)
+
+    # Contar cada ingrediente en todos los pedidos
+    for pedido in pizzeria['lista_pedidos']:
+        for ingrediente in pedido['ingredientes']:
+            indice = ingredientes_disponibles.index(ingrediente)
+            conteo_ingredientes[indice] += 1
+
+    # Encontrar el ingrediente con mayor cantidad
+    max_cantidad = max(conteo_ingredientes)
+    ingrediente_favorito = ingredientes_disponibles[conteo_ingredientes.index(max_cantidad)]
+
+    print(f"El ingrediente más solicitado es: {ingrediente_favorito}")
+
+
+# Función para mostrar todos los pedidos
+def mostrar_pedidos(pizzeria):
+    if not pizzeria['listadepedidos']:
+        print("No hay pedidos para mostrar.")
+    else:
+        for pedido in pizzeria['listadepedidos']:
+            print(pedido)
+
+
+# Menú principal
+def menu_principal():
+    pizzeria = inicializar_pizzeria()
+
+    while True:
+        print("\n:::: Menú Pizzería ::::\n")
+        print("1. Inicializar Pizzería")
+        print("2. Agregar pedido")
+        print("3. Eliminar pedido")
+        print("4. Buscar pedido por nombre")
+        print("5. Ver ingrediente preferido por los clientes")
+        print("6. Mostrar pedidos")
+        print("7. Salir")
+
+        opcion = input("Selecciona una opción: ")
+
+        if opcion == "1":
+            pizzeria = inicializar_pizzeria()
+            print("Pizzería inicializada con éxito.")
+        elif opcion == "2":
+            pizzeria = agregar_pedido(pizzeria)
+        elif opcion == "3":
+            pizzeria = eliminar_pedido(pizzeria)
+        elif opcion == "4":
+            buscar_pedido_por_nombre(pizzeria)
+        elif opcion == "5":
+            ingrediente_preferido(pizzeria)
+        elif opcion == "6":
+            mostrar_pedidos(pizzeria)
+        elif opcion == "7":
+            print("Saliendo del programa... hasta otra")
+            break
+        else:
+            print("Opción no válida. Intenta de nuevo.")
+
+
+# Ejecutar el programa
+menu_principal()
+
+# Pruebas antes de hacer el menú
+'''print(ingredientes_disponibles)
+pizzeria = inicializar_pizzeria()
+agregar_pedido(pizzeria)
+agregar_pedido(pizzeria)
+eliminar_pedido(pizzeria)
+buscar_pedido_por_nombre(pizzeria)
+ingrediente_preferido(pizzeria)'''
+</code></pre>

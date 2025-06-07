@@ -1,0 +1,93 @@
+<pre><code>
+# Ejercicio1.
+nombre = input("Introduzca su nombre por consola: ")
+print("Hola, ", nombre, "!")
+
+# Ejercicio2.
+nomb=input("Introduzca su nombre por consola: ")
+num1=int(input("Introduzca un número por consola: "))
+print((nomb + "\n") * num1)
+
+# Ejercicio3.
+nombr=input("Introduzca su nombre por consola: ")
+print("Su nombre en mayúsculas es ", nombr.upper(), "\nEl número de caracteres es de ", len(nombr))
+
+# Ejercicio4.
+num2=pow((3+2)/(2*5),2) #o bien num=((3+2)/(2*5)*(3+2)/(2*5))
+print(num2) #se declara la variable num, que será igual a esa operación, y se imprime por pantalla
+
+# Ejercicio5.
+clowns=int(input("Cantidad de payasos: "))
+dolls=int(input("Cantidad de muñecas: ")) #se declarán las variables payasos y muñecas introducidas por consola en un entero cada una.
+print("El peso total del paquete es de ", (clowns*112)+(dolls*75),"g, siendo el peso de los payasos de ", clowns*112,"g y el de las muñecas de ", dolls*75,"g.")
+# Se imprime directamente el peso total, los 112g de cada payaso por el número de payasos introducido, los 75g por muñeca introducida y la suma de ambos para saber el total. También aparecen los valores por separado de payasos y muñecas.
+
+# Ejercicio6.
+edad=int(input("Introduzca su edad para saber si es mayor de edad o no: "))
+if edad >= 18: #si el número introducido es menor o igual a 18, aparecerá este mensaje:
+    print("Es usted mayor de edad")
+elif edad <= 18: #si el número introducido es mayor o igual a 18, aparecerá este mensaje:
+    print("Usted no es mayor de edad")
+
+# Ejercicio7.
+num3=int(input("Introduzca un número: "))
+num4=int(input("Introduzca otro número: "))
+if num4==0: #si en el num2, el divisor, se introduce como valor "0", se mostrará el mensaje:
+    print("Error, introduzca otro segundo número y reinicie el programa")
+else: #si no, se mostrará este mensaje y la división:
+    print("El resultado de dividir el primer número por el segundo es de: ", num3/num4)
+
+# Ejercicio8.
+num5=int(input("Introduzca un número: "))
+num6=int(input("Introduzca otro número: "))
+if num5==None and num6==None or num5==None or num6==None or num6==0 :
+    print("ERROR, introduzca un número y reinicie el programa")
+else:
+    print(int(num1/num2))
+
+# Ejercicio9.
+edad1=int(input("Edad: ")) #se declara la variable edad en int que cogerá el valor introducido por consola
+if edad1 < 4 and edad1 >= 0:
+    print("Tu entrada es gratuita.")
+elif edad1 >= 4 and edad1 <=18:
+    print("Tu entrada son 5€.")
+elif edad1 > 18 and edad<115:
+    print("Tu entrada son 10€.")
+else:
+    print("Introduce una edad válida.")
+
+# Ejercicio10.
+palabra=input("Introduzca una palabra: ") #palabra es un string pedido por consola
+print((palabra + " ") * 10) #se imprime por consola esa palabra x10 dejando un espacio entre ellas
+
+# Ejercicio11.
+edad2=int(input("Introduzca su edad para ver todos los años que ha cumplido: "))
+i=1
+while i <= edad2: #se inicia un bucle while que vaya desde 1 hasta la edad introducida
+    print(i)
+    i+=1 #se imprimirán hacia abajo todos los años cumplidos hasta la edad actual.
+
+# Ejercicio12.
+num7=int(input("Introduzca un número entero positivo: "))
+i=1
+while i <=num7: # mientras que i -siendo 1- sea menor o igual que el número,
+    print(i, end=",")
+    i=i+2 # se imprimirán los números impares hasta llegar al número. +2 porque al empezar por 1, será 3 y será impar.
+
+# Ejercicio13.
+num8=int(input("Introduzca un número entero positivo: "))
+while num8>=0: #mientras que el numero sea mayor o igual que 0 -es hasta 0-:
+    print(num8, end=", ") # imprime el numero. entonces:
+    num8-=1 # numero tiene que decrementar en 1 hasta llegar a 0 y se corta el bucle. es igual a hacer esto: num= num-1
+
+# Ejercicio14.
+cantidad = float(input("Introduzca la cantidad a invertir: "))
+interes = float(input("Introduzca el porcentaje de interés anual: "))
+anios = int(input("Introduzca el número de años: "))
+#En estas tres líneas anteriores se pide por consola que se introduzcan los valores que pide el ejercicio y se almacenen
+#en float (ya que puede no ser un número entero) menos la variable años que siempre será un entero.
+print("\nAño\tCapital obtenido") #se imprimirán a la izquierda el número de años (hacia abajo) y en otra columan el capital
+for anios in range(1, anios + 1): #se inicia un bucle for que irá desde el primer año hasta el último año que se haya introducido
+    capital = cantidad * (1 + interes / 100) ** anios #se declara la variable capital para saber cuál es la cantidad después de recibir el interes cada X años introducidos por consola.
+    print(anios, "\t", capital) #se imprime el año (1º,2º... hasta llegar al introducido, y en otra columna -tabulado- la cantidad con el interés añadido)
+</code></pre>

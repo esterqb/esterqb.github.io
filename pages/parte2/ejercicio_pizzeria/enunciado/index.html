@@ -1,0 +1,71 @@
+<h3> Gestión de pedidos de una pizzería en Python 🍕</h3>
+
+<p>Desarrolla un programa en Python que permita gestionar los pedidos de una pizzería durante un día. El programa debe permitir almacenar información sobre los pedidos y proporcionar funcionalidades para la gestión de los mismos.</p>
+<h5><strong>Estructura de datos:</strong></h5>
+
+<ol>
+    <li><strong>Pizzería</strong>: Contendrá las siguientes características:
+        <ul>
+            <li><strong>numero_pedidos</strong>: Número total de pedidos almacenados.</li>
+            <li><strong>codigo_pedidos</strong>: Contador que se incrementa con cada pedido, proporcionando un código único.</li>
+            <li><strong>lista_pedidos</strong>: Lista que almacena los pedidos realizados. Puede contener hasta 20 pedidos.</li>
+        </ul>
+    </li>
+    <li><strong>Pedido</strong>: Cada pedido tendrá las siguientes características:
+        <ul>
+            <li><strong>nombre</strong>: Nombre del cliente.</li>
+            <li><strong>telefono</strong>: Teléfono del cliente.</li>
+            <li><strong>codigo_pedido</strong>: Código único del pedido, asignado automáticamente.</li>
+            <li><strong>numero_ingredientes</strong>: Número de ingredientes solicitados.</li>
+            <li><strong>ingredientes</strong>: Lista de ingredientes seleccionados para la pizza. Puede contener hasta 10 ingredientes.</li>
+        </ul>
+    </li>
+    <li><strong>Ingredientes disponibles</strong>: Los ingredientes estarán codificados de la siguiente manera:</li>
+    <p>0. Tomate</p>
+    <p>1. Queso</p>
+    <p>2. Nata</p>
+    <p>3. Cebolla</p>
+    <p>4. Pollo</p>
+    <p>5. Huevo</p>
+    <p>6. Salami</p>
+    <p>7. Anchoa</p>
+    <p>8. Bacon</p>
+    <p>9. Gamba</p>
+</ol>
+
+
+<h5>Funcionalidades requeridas:</h5>
+<ol>
+    <li><strong>def inicializar_pizzeria(). Inicializar la pizzería</strong>: Función para inicializar la estructura de la pizzería y preparar los pedidos. Si tengo la pizzería llena de pedidos, esto la deja vacía.</li>
+    <li><strong>def agregar_pedido(). Insertar un nuevo pedido</strong>: Función que permita al usuario agregar un nuevo pedido a la pizzería. El código de pedido será generado automáticamente.</li>
+    <li><strong>def eliminar_pedido(). Eliminar un pedido</strong>: Función que elimine un pedido existente a partir de su código.</li>
+    <li><strong>def buscar_pedido_por_nombre(). Buscar un pedido por nombre</strong>: Función que busque un pedido a partir del nombre del cliente.</li>
+    <li><strong>def ingrediente_preferido(). Determinar ingrediente preferido</strong>: Función que calcule cuál es el ingrediente más solicitado en el día.</li>
+    <li><strong>def mostar_pedidos(). Mostrar pedidos</strong>: Función que muestre todos los pedidos realizados.</li>
+</ol>
+
+
+<p>Para el que se haga la pregunta de si pasar argumentos a las funciones o dejarlo así, tienes dos opciones:</p>
+<ol>
+    <li> Declarar las variables fuera del ámbito de la función y dentro declararlas como global. Por ejemplo, fuera declaro la <strong>lista_pedidos</strong>, y dentro de, por ejemplo, la primera función de inicializar pizzería la declaro como <strong>global lista_pedidos</strong>. Os recuerdo que las variables globales se usan en programación para almacenar datos que necesitan ser accesibles desde cualquier parte del programa.</li>
+    <li> Paso por parámetro. Tendré que pasar, en el caso de def mostrar _pedidos(lista_pedido) para luego utilizarla pasandole una lista.</li>
+</ol>
+<h5>Requisitos adicionales</h5>
+<ul>
+    <li>El programa debe manejar un máximo de 20 pedidos en total, y un máximo de 10 ingredientes por pedido.</li>
+    <li>El programa debe validar la entrada de datos y manejar errores en caso de que los datos introducidos no sean correctos.</li>
+    <li>Deberás modularizar al menos dos funcionalidades requeridas y hacer un menú principal que integre las funcionalidades.</li>
+</ul>
+
+<h5>Ejemplo de uso:</h5>
+<ul>
+    <li>Inicializar la pizzería.</li>
+    <li>Insertar pedidos de clientes.
+        <ul>
+            <li>Ejemplo: Juan con número 55555555, ingredientes: Tomate, Queso, Cebolla, Bacon.</li>
+        </ul>
+    </li>
+    <li>Buscar pedidos por nombre (ej. "Juan").</li>
+    <li>Eliminar pedidos a partir del código.</li>
+    <li>Mostrar el ingrediente más solicitado en el día.</li>
+</ul>

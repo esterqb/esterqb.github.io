@@ -1,0 +1,87 @@
+<h3>Ejercicios: Listas, Tuplas y Diccionarios en Python 📖💻</h3>
+<h4> 1️⃣ Ordenar una lista</h4>
+<div class="mb-3">
+<p>1. Escribe una función llamada ordenar_lista que reciba una lista de números que devuelva la lista ordenada en orden ascendente.</p>
+<p>2. Modulariza el programa importando la función desde un archivo llamado utilidades.py.</p>
+<p>Ejemplo: lista = [5, 3, 8, 1, 2]</p>
+<p>lista_ordenada = ordenar_lista(lista)</p>
+<p>print(lista_ordenada) # Salida: [1, 2, 3, 5, 8]</p>
+</div>
+<h4> 2️⃣ Filtrar números pares</h4>
+<div class="mb-3">
+<p>1. Escribe una función que reciba una lista de números y retorne una nueva lista con solo los números pares.</p>
+<p>2. Utiliza la función dentro del archivo principal, pero crea el módulo filtrado.py para la definición de la función.</p>
+<p>Ejemplo: lista = [1, 2, 3, 4, 5, 6, 7, 8, 9]</p>
+<p>pares = filtrar_pares(lista)</p>
+<p>print(pares) # Salida: [2, 4, 6, 8]</p>
+</div>
+<h4> 3️⃣ Eliminar duplicados de una lista</h4>
+<div class="mb-3">
+<p>1. Crea una función llamada eliminar_duplicados que reciba una lista de números con elementos duplicados y retorne una nueva lista sin duplicados.</p>
+<p>2. Obliga a que la función esté definida en un módulo externo llamado listas_util.py.</p>
+<p>Ejemplo: lista = [1, 2, 2, 3, 4, 4, 5]</p>
+<p>nueva_lista = eliminar_duplicados(lista)</p>
+<p>print(nueva_lista) # Salida: [1, 2, 3, 4, 5]</p>
+</div>
+<h4> 4️⃣ Desempaquetar tuplas</h4>
+<div class="mb-3">
+<p>1. Crea una función llamada desempaquetar_tupla que reciba una tupla con tres elementos y devuelva cada uno de ellos por separado.</p>
+<p>2. La función debe estar en el archivo principal.</p>
+<p>Ejemplo: tupla = (10, 20, 30)</p>
+<p>a, b, c = desempaquetar_tupla(tupla)</p>
+<p>print(a, b, c) # Salida: 10 20 30</p>
+</div>
+<h4> 5️⃣ Crear una lista de tuplas</h4>
+<div class="mb-3">
+<p>1. Escribe un programa que cree una lista de tuplas, donde cada tupla contenga el índice y el valor de cada elemento de una lista original.</p>
+<p>2. Define una función llamada crear_lista_tuplas y colócala en un módulo externo llamado tuplas_util.py.</p>
+<p>Ejemplo: lista = ['a', 'b', 'c', 'd']</p>
+<p>lista_tuplas = crear_lista_tuplas(lista)</p>
+<p>print(lista_tuplas) # Salida: [(0, 'a'), (1, 'b'), (2, 'c'), (3, 'd')]</p>
+</div>
+<h4> 6️⃣ Contar elementos en una tupla</h4>
+<div class="mb-3">
+<p>1. Crea una función llamada contar_elementos_tupla que reciba una tupla y devuelva la cantidad de veces que aparece un elemento específico.</p>
+<p>2. Obliga a que la función esté en el archivo tuplas_util.py.</p>
+<p>Ejemplo: tupla = (1, 2, 3, 1, 2, 1)</p>
+<p>cuenta = contar_elementos_tupla(tupla, 1)</p>
+<p>print(cuenta) # Salida: 3</p>
+</div>
+<h4> 7️⃣ Crear diccionario a partir de dos listas</h4>
+<div class="mb-3">
+<p>1. Crea una función llamada crear_diccionario que reciba dos listas: una de claves y otra de valores, y las combine en un diccionario.</p>
+<p>2. Importa esta función desde el archivo diccionarios_util.py.</p>
+<p>Ejemplo: claves = ['nombre', 'edad', 'ciudad']</p>
+<p>valores = ['Carlos', 25, 'Madrid']</p>
+<p>diccionario = crear_diccionario(claves, valores)</p>
+<p>print(diccionario) # Salida: {'nombre': 'Carlos', 'edad': 25, 'ciudad': 'Madrid'}</p>
+</div>
+<h4> 8️⃣ Contar ocurrencias de palabras</h4>
+<div class="mb-3">
+<p>1. Escribe un programa que cuente cuántas veces aparece cada palabra en una cadena de texto y almacene los resultados en un diccionario.</p>
+<p>2. La lógica para contar las palabras debe estar dentro de una función llamada contar_palabras, ubicada en un módulo texto_util.py.</p>
+<p>Ejemplo: texto = "hola hola adios hola"</p>
+<p>conteo = contar_palabras(texto)</p>
+<p>print(conteo) # Salida: {'hola': 3, 'adios': 1}</p>
+</div>
+<h4> 9️⃣ Revertir un diccionario</h4>
+<div class="mb-3">
+<p>1. Escribe una función llamada revertir_diccionario que invierta un diccionario, es decir, que los valores se conviertan en las claves y las claves en los valores.</p>
+<p>2. Coloca la función en el módulo diccionarios_util.py.</p>
+<p>Ejemplo: diccionario = {'a': 1, 'b': 2, 'c': 3}</p>
+<p>diccionario_invertido = revertir_diccionario(diccionario)</p>
+<p>print(diccionario_invertido) # Salida: {1: 'a', 2: 'b', 3: 'c'}</p>
+</div>
+<h4> 9️⃣9️⃣ Proyecto Modularizado</h4>
+<div class="mb-3">
+<p>1. Crea un pequeño proyecto donde deberás implementar las siguientes funcionalidades:</p>
+<p>- Crear una lista de números aleatorios entre 1 y 100.</p>
+<p>- Encontrar el número más grande y el más pequeño de la lista.</p>
+<p>- Contar cuántas veces aparece cada número en la lista y almacenar los resultados en un diccionario.</p>
+<p>- Ordenar la lista de manera ascendente.</p>
+<p>2. Estructura del proyecto:</p>
+<p>- Archivo main.py: El archivo principal que importará las funciones necesarias.</p>
+<p>- Módulo listas_util.py: Contendrá las funciones para generar la lista, encontrar el máximo y mínimo.</p>
+<p>- Módulo diccionarios_util.py: Contendrá las funciones para contar las ocurrencias de los números.</p>
+<p>- Módulo ordenar.py: Contendrá la función para ordenar la lista.</p>
+</div>
