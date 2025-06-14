@@ -1,22 +1,71 @@
-document.querySelectorAll('.load-content-btn').forEach(btn => {
-  btn.addEventListener('click', async () => {
-    console.log("Botón clicado:", btn);
-    const page = btn.getAttribute('data-page');
-    const targetId = btn.getAttribute('data-bs-target')?.replace('#', '');
-    const container = document.getElementById(targetId);
-
-    // Solo carga si container está vacío para evitar recargas
-    if (page && container && container.innerHTML.trim() === "") {
-      try {
-        const response = await fetch(page);
-        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-
-        const html = await response.text();
-        container.innerHTML = html;
-      } catch (error) {
-        console.error("Error cargando página:", error);
-        container.innerHTML = "<p class='text-danger'>Error al cargar el contenido.</p>";
-      }
+document.addEventListener("DOMContentLoaded", function () {
+    // Función para cargar contenido dinámico
+    function loadContent(button) {
+        const page = button.getAttribute('data-page');
+        const targetSelector = button.getAttribute('data-bs-target');
+        const targetDiv = document.querySelector(targetSelector);
+        
+        if (!targetDiv.innerHTML.trim()) {
+            fetch(page)
+                .then(response => {
+                    if (!response.ok) throw new Error("Error al cargar contenido");
+                    return response.text();
+                })
+                .then(html => {
+                    targetDiv.innerHTML = html;
+                })
+                .catch(error => {
+                    console.error(error);
+                    targetDiv.innerHTML = `
+                        <div class="alert alert-danger">
+                            Error al cargar el contenido: ${error.message}
+                        </div>`;
+                });
+        }
     }
-  });
+
+    // Inicializar eventos para botones de carga de contenido
+    function initContentButtons() {
+        document.querySelectorAll('.load-content-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                loadContent(this);
+            });
+        });
+    }
+
+    // Inicializar cuando se carga la sección de programación
+    function initProgramacionSection() {
+        const introSection = document.querySelector('.container.text-center.my-5');
+        if (introSection) introSection.remove();
+        
+        initContentButtons();
+    }
+
+    // Manejar clic en el navbar
+    document.querySelector('.load-section').addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetDiv = document.getElementById('apartado-programacion');
+        targetDiv.innerHTML = '';
+        
+        fetch(this.getAttribute('data-page'))
+            .then(response => response.text())
+            .then(html => {
+                targetDiv.innerHTML = html;
+                initProgramacionSection();
+            });
+        
+        history.pushState(null, "", this.getAttribute('href'));
+    });
+
+    // Carga inicial
+    if (window.location.hash === "#programacion") {
+        const targetDiv = document.getElementById('apartado-programacion');
+        fetch("pages/programacion/index.html")
+            .then(response => response.text())
+            .then(html => {
+                targetDiv.innerHTML = html;
+                initProgramacionSection();
+            });
+    }
 });
