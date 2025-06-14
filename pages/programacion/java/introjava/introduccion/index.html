@@ -1,0 +1,538 @@
+<h4 id="2-1" class="my-4">2.1.Introducción a Java.</h4>
+<h5 id="2-1-1" class="my-4">2.1.1.¿Cómo funciona Java?</h5>
+<p>El proceso es el siguiente:</p>
+<p>En primer lugar creamos un archivo con extensión <strong>java</strong>, que es el código fuente de nuestro algoritmo. Más tarde ese código es compilado y obtenemos un archivo con extensión <strong>class</strong>. Ese archivo class es el <strong>BYTECODE JAVA</strong>.</p>
+<p>A continuación, ese BYTECODE JAVA es interpretado por la Máquina virtual JAVA, y mediante un compilador JIT se obtiene el <strong>código máquina</strong>. En último lugar, el código máquina es ejecutado por el Hardware del dispositivo.</p>
+<img src="../../../../../assets/img1.png" alt="Bytecode" width="600px">
+<p>Ese archivo class en <strong>BYTECODE JAVA</strong> es exactamente el mismo, independientemente de la plataforma. Es la JVM la que se encarga de interpretar ese BYTECODE y convertirlo en código máquina específico para ese hardware (dispositivo/arquitectura).</p>
+<p>Cada tipo de HW obtiene un código máquina distinto.</p>
+<img src="../../../../../assets/img2.png" alt="codigo máquina" width="600px">
+<h5 id="2-1-2" class="my-4">2.1.2.El lenguaje Java.</h5>
+<p>Compilación y ejecución en Java.</p>
+<img src="../../../../../assets/img3.png" alt="compilador" width="600px">
+<img src="../../../../../assets/img4.png" alt="proceso" width="600px">
+
+<h4 id="tema-2-2" class="my-4">2.2.Preparación del entorno: Requisitos.</h4>
+<p>Para <strong>usar un programa</strong> creado en Java se necesitan el JRE (Java Runtime Environment) y la JVM (Máquina Virtual Java).</p>
+<p>Para <strong>crear un programa</strong> en Java se necesitan el JDK (Java Development Kit) y un editor de código (como VSCode, IntelliJ, Eclipse...). El JDK es la herramienta básica para crear programas usando el lenguaje Java y se descarga desde la página oficial de Java (en la web de Oracle).</p>
+<h5 id="2-2-1" class="my-4">2.2.1.Programas en Java - Hola mundo.</h5>
+<p>En <strong>VS Code</strong>:</p>
+<ol class="list-group list-group-numbered list-group-flush">
+    <li class="list-group-item">En primer lugar, deberemos crear una carpeta donde guardaremos el código Java. Una buena estructura sería crear una carpeta CursoJava y dentro de ella una carpeta por cada tema, en este caso crearemos la carpeta IntroduccionAJava.</li>
+    <li class="list-group-item">Tras ello abriremos la carpeta con la opción Open folder…</li>
+    <li class="list-group-item">Ahora creamos un nuevo fichero con la opción Archivo | Nuevo archivo y procederemos a guardarlo con la opción Archivo| Guardar como… le diremos HolaMundo.java</li>
+    <li class="list-group-item">En el fichero que hemos creado copiaremos el código Java que tenemos a continuación.
+        <pre><code>
+// Aplicación HolaMundo de ejemplo
+class HolaMundo {
+    public static void main( String args[] ) {
+        System.out.println( "Hola Mundo!" );
+    }
+}
+        </code></pre>
+    </li>
+    <li class="list-group-item">Es el momento de compilar el programa, lo haremos en la terminal que tiene Code, opción Terminal > Nuevo Terminal</li>
+    <li class="list-group-item">Procedemos a compilar con la siguiente orden: javac HolaMundo.java</li>
+    <li class="list-group-item">La instrucción anterior nos habrá creado el BYTECODE de JAVA, que es el archivo HolaMundo.class. Finalmente para ejecutar el programa debemos introducir: java HolaMundo</li>
+    <li class="list-group-item">Lo cual nos mostrará por consola el mensaje Hola Mundo!</li>
+</ol>
+<h6 id="2-2-1-1" class="my-4">Entendiendo mi primer programa en Java</h6>
+<pre style="background-color:#2b2b32"><code style="color:#fff">
+// Aplicación HolaMundo de ejemplo <span style="font-weight: bold; color:grey">//Las dos barras sirven para hacer un comentario, para mejorar la lectura del código, y no se ejecutan.</span>
+class HolaMundo { <span style="font-weight: bold; color:blueviolet">//Declaración de la clase 'HolaMundo'</span>
+    public static void main( String args[] ) { <span style="font-weight: bold; color:#ff41e9">//Declaración del método main</span>
+        System.out.println( "Hola Mundo!" ); <span style="font-weight: bold; color:#4dff00">//Instrucción para imprimir por pantalla una cadena de texto. Las instrucciones se separan con punto y coma</span>
+    } <span style="font-weight: bold; color:#ff41e9">//Fin del método main</span>
+} <span style="font-weight: bold; color:blueviolet">//Fin de la clase 'HolaMundo'</span>
+</code></pre>
+<h6 id="2-2-1-2" class="my-4">Salida por pantalla</h6>
+<p>La salida se realiza a partir de la clase <strong>System.out</strong>. A partir de dicha clase podemos acceder a los siguientes métodos:</p>
+<p class="ms-2"><strong>print</strong>: Imprime por pantalla una cadena de tipo String. Se pueden utilizar otros tipos básicos de variables, ya que se hace una conversión a partir de su valor. Además podemos utilizar el operador “+” para concatenar Strings. Todos los literales deben ir entre comillas dobles, a excepción de un único carácter, que en ese caso puede ir también entre comillas simples.</p>
+<p class="ms-4"><strong>System.out.print</strong>("Hola");</p>
+<p class="ms-2"><strong>println</strong>: Igual que print, pero añade un salto de línea.</p>
+<p class="ms-4"><strong>System.out.println</strong>("Hola con salto de línea");</p>
+<h6 id="2-2-1-3" class="my-4">Salida por pantalla con variables</h6>
+<p>Podemos concatenar texto entre comillas con los valores de las variables, para ello debemos utilizar el operador suma (+). Por ejemplo:</p>
+<pre><code>
+int resultado = 20;
+System.out.print("El resultado es"+resultado);
+</code></pre>
+<p>La salida del programa será: → El resultado es20. Se deben tener en cuenta los espacios en blanco para separar el texto de los valores de las variables. Además, también podemos concatenar texto con el resultado de una expresión. Por ejemplo:</p>
+<pre><code>
+System.out.println("El resultado es "+resultado+5); //205
+System.out.println("El resultado es "+(resultado+5)); //25
+System.out.println(resultado+5); //25
+</code></pre>
+<h4 id="2-4" class="my-4">2.4.Variables.</h4>
+<p>Las <strong>variables</strong> se utilizan para almacenar los datos que manejan los programas. Pueden guardar todo tipo de información, desde cantidades numéricas y textos, hasta valores booleanos.</p>
+<p>Como el propio nombre indica, los datos almacenados en dichas variables pueden “variar” a lo largo de la ejecución del programa.</p>
+<p>Necesitamos un <strong>espacio de memoria</strong> donde poder almacenar los valores que tienen almacenados las variables en cada momento.</p>
+<p>En casi cualquier lenguaje de programación podremos reservar esos "espacios", y asignarles un nombre con el que acceder a ellos. Esto es lo que se conoce como "variables".</p>
+<p>Para no desperdiciar la memoria de nuestro ordenador, el espacio de memoria que hace falta "reservar" será distinto según el “tipo de datos” que queramos almacenar(enteros, reales, caracteres, cadenas, etc).</p>
+<h5 id="2-4-1" class="my-4">2.4.1.Tipado fuerte</h5>
+<p>JAVA es un lenguaje con un tipado fuerte, esto significa que se debe indicar el tipo de datos que queremos guardar dentro de una variable. El tipo de tipado es una característica propia de cada lenguaje.</p>
+<p>Esto hace a JAVA más “estricto” en la declaración de variables, esto normalmente se traduce en una mayor protección contra posibles errores. Por ejemplo:</p>
+<ul class="list-group list-group-flush">
+    <li class="list-group-item">Vamos a declarar una variable que se llama cantidad y es de tipo entero.</li>
+    <li class="list-group-item">Vamos a declarar una variable que se llama nombre y es de tipo texto.</li>
+</ul>
+<h5 id="2-4-2" class="my-4">2.4.2.Tipos de variables numéricas</h5>
+<img src="../../../../../assets/img5.png" alt="tipos" width="800px">
+<h5 id="2-4-3" class="my-4">2.4.3.Otros tipos de variables</h5>
+<p>El <strong>char</strong>: almacena un único carácter, puede ser una letra, un dígito numérico, o cualquier otro carácter alfanumérico. Ocupa 2 bytes y sigue un estándar llamado Unicode (que a su vez engloba a otro estándar anterior llamado ASCII).</p>
+<p>El <strong>boolean</strong>: se usa para evaluar condiciones, y puede tener el valor "verdadero" (true) o "false" (false). Ocupa 1 bit.</p>
+<p>El <strong>String</strong>: se utiliza para almacenar cadenas de caracteres, es decir, puede almacenar un conjunto de char. Aunque no es un tipo primitivo, es un tipo de dato muy utilizado.</p>
+<h5 id="2-4-4" class="my-4">2.4.4.Declarar variables</h5>
+<p>La forma de "declarar" una variable en JAVA es detallando primero el tipo de datos que podrá almacenar y después el nombre(identificador) que daremos la variable. Además, se puede indicar un valor inicial a través del igual.</p>
+<p>Para finalizar la asignación de la variable debemos introducir un punto y coma.</p>
+<p>La declaración de variables funciona de la siguiente forma:</p>
+<ol class="list-group list-group-numbered list-group-flush">
+    <li class="list-group-item">Se evalúa la expresión a la derecha del igual.</li>
+    <li class="list-group-item">Se guarda el resultado de la expresión sobre la variable a la izquierda del igual.</li>
+</ol>
+<p>Además podemos asignar a una variable el valor de otra variable, e incluso, realizar operaciones con ellas. Se pueden declarar varias variables del mismo tipo "a la vez", separando con comas.</p>
+<pre><code>
+int cantidad = 5 + 2; //guardamos en cantidad un 7
+int precio = 10; //guardamos en precio un 10
+precio = 5; //modificamos el precio a 5
+int precioFinal = cantidad * precio; //guardamos un 35 en precioFinal
+precioFinal = precioFinal + 10; //guardamos 45 en precioFinal
+int a = 5, b = 10; // "a" y "b" son enteros y valen 5 y 10
+short c = -1, d, e = 4; // "c" vale -1, "d" no tiene valor, "e" vale 4
+int f, g; // declaramos las variables "f" y "g" de tipo entero
+</code></pre>
+<p>Los nombres de variables pueden contener letras y números (pero no pueden comenzar con un número). Pueden contener símbolos, como el de subrayado, pero no podrán contener otros muchos símbolos, como los de las distintas operaciones matemáticas posibles (+,-,*,/), ni llaves o paréntesis.</p>
+<p>El <strong>identificador de la variable</strong> es el nombre que damos a la variable.</p>
+<h5 id="2-4-5" class="my-4">2.4.5.Palabras reservadas</h5>
+<p>Existen palabras reservadas que no se pueden utilizar como identificadores para las variables:</p>
+<div class="table-responsive">
+  <table class="table table-bordered">
+    <tbody>
+      <tr>
+        <td>abstract</td>
+        <td>assert</td>
+        <td>boolean</td>
+        <td>break</td>
+        <td>byte</td>
+        <td>case</td>
+      </tr>
+      <tr>
+        <td>catch</td>
+        <td>char</td>
+        <td>class</td>
+        <td>const</td>
+        <td>continue</td>
+        <td>default</td>
+      </tr>
+      <tr>
+        <td>do</td>
+        <td>double</td>
+        <td>else</td>
+        <td>enum</td>
+        <td>extends</td>
+        <td>false</td>
+      </tr>
+      <tr>
+        <td>final</td>
+        <td>finally</td>
+        <td>float</td>
+        <td>for</td>
+        <td>goto</td>
+        <td>if</td>
+      </tr>
+      <tr>
+        <td>implements</td>
+        <td>import</td>
+        <td>instanceof</td>
+        <td>int</td>
+        <td>interface</td>
+        <td>long</td>
+      </tr>
+      <tr>
+        <td>native</td>
+        <td>new</td>
+        <td>null</td>
+        <td>package</td>
+        <td>private</td>
+        <td>protected</td>
+      </tr>
+      <tr>
+        <td>public</td>
+        <td>return</td>
+        <td>short</td>
+        <td>static</td>
+        <td>strictfp</td>
+        <td>super</td>
+      </tr>
+      <tr>
+        <td>switch</td>
+        <td>synchronized</td>
+        <td>this</td>
+        <td>throw</td>
+        <td>throws</td>
+        <td>transient</td>
+      </tr>
+      <tr>
+        <td>true</td>
+        <td>try</td>
+        <td>void</td>
+        <td>volatile</td>
+        <td>while</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<h5 id="2-4-6" class="my-4">2.4.6.Declarar variables numéricas</h5>
+<p>Para utilizar decimales se usa el punto, y una ‘f’ final para indicar el tipo float. Podemos utilizar una ‘d’ final para indicar que es de tipo double, pero no es obligatorio.</p>
+<pre><code>
+float f1 = 1f; // "f1" es de tipo float y vale 1.0
+float f2 = 5.4f; // "f2" es de tipo float y vale 5.4
+float f3 = 12E6f; // "f3" es de tipo float y vale 12000000
+float f4 = 0.55E-2f; // "f4" es de tipo float y vale 0.0055
+float f5 = -5.44E-2f; // "f5" es de tipo float y vale -0.0544
+double d1 = 2; // "d1" es de tipo double y vale 2.0
+double d2 = 4.001d; // "d2" es de tipo double y vale 4.001
+double d3 = 1.51E-3; // "d3" es de tipo double y vale 0.00151
+double d4 = 2.11E8d; // "d4" es de tipo double y vale 211000000
+double d5 = -0.11E-3; // "d5" es de tipo double y vale -0.00011
+</code></pre>
+<h5 id="2-4-7" class="my-4">2.4.7.Declarar variables en hexadecimal</h5>
+<p>El sistema hexadecimal es muy utilizado en computación, es un sistema de base 16. Esto significa que tiene 16 valores distintos para representar la información. Del 0 al 9 y las letras A, B, C, D, E y F.</p>
+<p>Este uso tan extendido se debe a que las CPU utilizan el byte(8 bits) como unidad básica de memoria. Un byte representa 256 valores posibles, por lo tanto dos dígitos hexadecimales corresponden exactamente a un byte, 16 x 16 = 256. Debido a ello, podemos hacer las siguientes conversiones.</p>
+<ul class="list-group list-group-flush">
+    <li class="list-group-item">byte(1byte) se representa con 2 dígitos hexadecimales (desde 0x00 hasta 0xFF)</li>
+    <li class="list-group-item">short(2bytes) se representa con 4 dígitos hexadecimales (desde 0x0000 hasta 0xFFFF)</li>
+    <li class="list-group-item">int(4bytes) se representa con 8 dígitos hexadecimales (desde 0x00000000 hasta 0xFFFFFFFF)</li>
+    <li class="list-group-item">long(8bytes) se representa con 16 dígitos hexadecimales.</li>
+</ul>
+<p>Para declarar variables de tipo entero en hexadecimal debemos escribir en primer lugar 0x:</p>
+<pre><code>
+byte num1 = 0x02; // almacena un 2
+byte num2 = 0x0B; // almacena un 11
+byte num3 = 0x12; // almacena un 18
+</code></pre>
+<h5 id="2-4-8" class="my-4">2.4.8.Declarar variables booleanas</h5>
+<p>Las variables booleanas son muy utilizadas en programación y sirven para evaluar condiciones. Este tipo de variables únicamente pueden almacenar dos valores, verdadero o falso. Son muy baratas, ocupan 1bit.</p>
+<p>Para declarar variables de tipo booleano se utiliza la palabra boolean. Para asignar valores debemos utilizar las palabras reservadas true, y false. Las palabras reservadas nunca van entre comillas. Podemos asignar también el resultado de una expresión lógica a este tipo de variables. </p>
+<pre><code>
+boolean seguir = true; // correcto
+boolean parar = false; // correcto
+boolean seguir = 3 > 5; // false
+boolean parar = 7 != 6; // true
+</code></pre>
+<h5 id="2-4-9" class="my-4">2.4.9.Declarar variables char</h5>
+<p>Se pone su valor entre comillas simples: char letra = 'A';</p>
+<p>En JAVA las variables de tipo char internamente funcionan como enteros, de hecho podemos cambiar su valor a través de operaciones aritméticas. Los valores más frecuentes están definidos en la tabla ASCII.</p>
+<h5 id="2-5" class="my-4">2.5.Cadenas de texto.</h5>
+<p>Una cadena de texto es un bloque de caracteres alfanuméricos, que usaremos para poder almacenar palabras y frases. Puede tener cero o más caracteres.</p>
+<p><strong>El valor de una variable de tipo String siempre debe ir entre comillas dobles.</strong></p>
+<p>Podemos "concatenar" cadenas (juntar dos cadenas para dar lugar a una nueva) con el signo +, igual que sumamos números. Por otra parte, la clase String tiene una gran cantidad de funciones (operaciones con nombre) que podemos aplicar para trabajar con ellas.</p>
+<pre><code>
+String nada = ""; //cadena vacía
+String nombre = "Pepe";
+String apellido = "Martínez";
+String nombreCompleto1 = nombre + apellido; //PepeMartínez
+String nombreCompleto2 = nombre + " " + apellido; //Pepe Martínez
+String frase;
+int cantidad = 20;
+frase = nombre + " tiene " + cantidad +" años"; //Pepe tiene 20 años
+frase = nombre + " tiene " + cantidad + 5 +" años"; //Pepe tiene 205 años
+</code></pre>
+<p>Métodos utilizados trabajando con String:</p>
+<div class="table-responsive">
+    <table class="table table-bordered table-hover table-methods">
+        <thead class="table-primary text-center">
+            <tr>
+                <th class="col-4">Método</th>
+                <th class="col-8">Descripción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>length()</td>
+                <td>Devuelve la longitud (número de caracteres) de la cadena</td>
+            </tr>
+            <tr>
+                <td>charAt(int pos)</td>
+                <td>Devuelve el carácter que hay en cierta posición</td>
+            </tr>
+            <tr>
+                <td>toLowerCase()</td>
+                <td>Devuelve la cadena convertida a minúsculas</td>
+            </tr>
+            <tr>
+                <td>toUpperCase()</td>
+                <td>Devuelve la cadena convertida a mayúsculas</td>
+            </tr>
+            <tr>
+                <td>substring(int desde, int hasta)</td>
+                <td>Devuelve una subcadena: varias letras a partir de una posición dada</td>
+            </tr>
+            <tr>
+                <td>replace(char antiguo, char nuevo)</td>
+                <td>Devuelve una cadena con un carácter reemplazado por otro</td>
+            </tr>
+            <tr>
+                <td>trim()</td>
+                <td>Devuelve una cadena sin espacios blanco iniciales ni finales</td>
+            </tr>
+            <tr>
+                <td>startsWith(String subcadena)</td>
+                <td>Indica si la cadena empieza con una cierta subcadena</td>
+            </tr>
+            <tr>
+                <td>endsWith(String subcadena)</td>
+                <td>Indica si una cadena termina con una cierta subcadena</td>
+            </tr>
+            <tr>
+                <td>indexOf(String subcadena, [int desde])</td>
+                <td>Indica la posición en que se encuentra una cierta subcadena (buscando desde el principio a partir de una posición opcional)</td>
+            </tr>
+            <tr>
+                <td>lastIndexOf(String subcadena, [int desde])</td>
+                <td>Indica la posición en que se encuentra una cierta subcadena (buscando desde el final a partir de una posición opcional)</td>
+            </tr>
+            <tr>
+                <td>valueOf(objeto)</td>
+                <td>Devuelve un String que es la representación como texto del objeto que se le indique (número, boolean, etc.)</td>
+            </tr>
+            <tr>
+                <td>concat(String cadena)</td>
+                <td>Devuelve la cadena con otra añadida al final</td>
+            </tr>
+            <tr>
+                <td>equals(String cadena)</td>
+                <td>Mira si dos cadenas son iguales (lo mismo que ==)</td>
+            </tr>
+            <tr>
+                <td>equalsIgnoreCase(String cadena)</td>
+                <td>Mira si dos cadenas son iguales, pero despreciando las diferencias entre mayúsculas y minúsculas</td>
+            </tr>
+            <tr>
+                <td>compareTo(String cadena2)</td>
+                <td>Compara una cadena con la otra (devuelve 0 si son iguales, negativo si la cadena es menor que cadena2 y positivo si es mayor)</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<p>En ningún momento estamos modificando el String de partida. Eso sí, en muchos de los casos creamos un String modificado a partir del original.</p>
+<p>El método "compareTo()" se basa en el orden lexicográfico: una cadena que empiece por "A" se considerará "menor" que otra que empiece por la letra "B"; si la primera letra es igual en ambas cadenas, se pasa a comparar la segunda, y así sucesivamente. Las mayúsculas y minúsculas se consideran diferentes.</p>
+<p>Un comentario extra sobre los Strings: Java convertirá a String todo aquello que indiquemos entre comillas dobles. Así, son válidas expresiones como "Prueba".length() y también podemos concatenar varias expresiones dentro de una orden System.out.println():</p>
+<pre><code>
+//Ejemplos de uso de funciones en String
+String nombre = "Pepe";
+String apellidos = "Martínez García";
+String nombreCompleto = nombre + apellidos;
+int longitud = nombre.length();
+int longitud2 = "245".length();
+char letra = apellidos.charAt(3);
+String cadena1 = nombreCompleto.substring(0,4);
+String cadena2 = " Hola ".trim();
+String cadena3_1 = cadena1.substring(3,4);
+String cadena3_2 = cadena1.substring(3,3);
+String cadena3_3 = cadena1.substring(4,3);
+String cadena4 = (cadena2 + "Hola").toLowerCase();
+int posicion1 = cadena4.indexOf("o");
+int posicion2 = cadena4.indexOf("hola");
+int posicion3 = cadena4.indexOf("Hola");
+</code></pre>
+<h4 id="2-6" class="my-4">2.6. Operadores y expresiones.</h4>
+<h5 id="2-6-1" class="my-4">2.6.1.Operaciones matemáticas básicas.</h5>
+<div class="table-responsive">
+    <table class="table table-bordered table-hover table-operators">
+        <thead class="table-primary">
+            <tr>
+                <th class="text-center">Operador</th>
+                <th class="text-center">Operación</th>
+                <th class="text-center">Operador</th>
+                <th class="text-center">Operación</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="text-center operator-code">+</td>
+                <td>Suma o signo positivo</td>
+                <td class="text-center operator-code">+=</td>
+                <td>Suma y asignación</td>
+            </tr>
+            <tr>
+                <td class="text-center operator-code">-</td>
+                <td>Resta o signo negativo</td>
+                <td class="text-center operator-code">-=</td>
+                <td>Resta y asignación</td>
+            </tr>
+            <tr>
+                <td class="text-center operator-code">*</td>
+                <td>Multiplicación</td>
+                <td class="text-center operator-code">*=</td>
+                <td>Multiplicación y asignación</td>
+            </tr>
+            <tr>
+                <td class="text-center operator-code">/</td>
+                <td>División</td>
+                <td class="text-center operator-code">/=</td>
+                <td>División y asignación</td>
+            </tr>
+            <tr>
+                <td class="text-center operator-code">%</td>
+                <td>Módulo (resto de división)</td>
+                <td class="text-center operator-code">%=</td>
+                <td>Módulo y asignación</td>
+            </tr>
+            <tr>
+                <td class="text-center operator-code">++</td>
+                <td>Incremento en 1</td>
+                <td class="text-center operator-code">--</td>
+                <td>Decremento en 1</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<pre><code>
+int a = 3, b = 2;
+float f1 = 3f, f2 = 2f;
+System.out.println("3 + 2 = "+a+b); // 3 + 2 = 32
+System.out.println("3 + 2 = "+(a+b)); // 3 + 2 = 5
+System.out.println(a+" + "+b+" = "+(a+b)); // 3 + 2 = 5
+System.out.println(a+" - "+b+" = "+(a-b)); // 3 - 2 = 1
+System.out.println(a+" x "+b+" = "+(a*b)); // 3 x 2 = 6
+System.out.println(a+" / "+b+" = "+(a/b)); // 3 / 2 = 1
+System.out.println(f1+" / "+f2+" = "+(f1/f2)); // 3.0 / 2.0 = 1.5
+System.out.println(a+" / "+f2+" = "+(a/f2)); // 3 / 2.0 = 1.5
+System.out.println(b+" % "+a+" = "+(b%a)); // 2 % 3 = 2
+System.out.println(f2+" % "+f1+" = "+(f2%f1)); // 2.0 % 3.0 = 2.0
+</code></pre>
+<h5 id="2-6-2" class="my-4">2.6.2.Incrementos y asignaciones abreviadas.</h5>
+<p>Hay varias operaciones muy habituales, que tienen una sintaxis abreviada en Java. Por ejemplo, para sumar 2 a una variable "a", la forma "normal" de conseguirlo sería: a = a + 2; pero existe una forma abreviada en Java: a += 2;</p>
+<p>Al igual que tenemos el operador += para aumentar el valor de una variable, tenemos -= para disminuirlo, /= para dividirla y *= para multiplicarla. Por ejemplo, para multiplicar por 10 el valor de la variable "b" haríamos b *= 10;</p>
+<p>También podemos aumentar o disminuir en una unidad el valor de una variable, empleando los operadores de "incremento" (++) y de "decremento" (--). Así, para sumar 1 al valor de "a", podemos emplear cualquiera de estas tres formas:</p>
+<pre><code>
+a = a+1; //2
+a += 1; //3
+a++; //4
+</code></pre>
+<h5 id="2-6-3" class="my-4">2.6.3.Incrementos y decremento.</h5>
+<p>Los operadores de incremento y de decremento se pueden escribir antes o después de la variable. Así, es lo mismo escribir estas dos líneas:</p>
+<p>a++;</p>
+<p>++a;</p>
+<p>Pero hay una diferencia si ese valor se asigna a otra variable "al mismo tiempo" que se incrementa/decrementa:</p>
+<p>int c=5;</p>
+<p>int b=c++;</p>
+<p>Guarda como resultado c = 6 y b = 5, se asigna el valor a "b" antes de incrementar "c". Sin embargo:</p>
+<p>int c=5;</p>
+<p>int b=++c;</p>
+<p>Guarda como resultado c = 6 y b = 6, se asigna el valor a "b" después de incrementar "c".</p>
+<pre><code>
+//Ejemplos de operaciones matemáticas.
+int a = 3, b = 2, c = 1;
+a += b; // a = a + b → 5
+c += a; // c = c + a → 6
+b += a + b; // b = b + (a + b) → 9
+c -= a; // c = c - a → 1
+c *= a / 2; // c = c * (a / 2) → 2
+b %= 5; // b = b % 5 → 4
+b /= c; // b = b / c → 2
+b *= a + b; // b = b * (a + b) → 14
+a /= b - c * 5;// a = a / (b - c * 5) → 1
+
+//Ejemplos de incrementos y decrementos
+int a=1, b=2, c=3;
+b = ++c; // b = (++c)
+a += b++; // a = a + b++
+a = a+++a; // a = (a++) + a
+a -= b--; // a = a - b--
+c = a++ - ++b; // c = a++ - (++b)
+c -= ++a; // c = c - (++a)
+a -= ++c; // a = a - (++c)
+a -= c++; // a = a - c++
+a -= --c; // a = a - (--c)
+
+int a = 1; //En todas las instrucciones iniciamos a 1 una previamente
+//------------------------------------------------------------------------
+a = ++a; //guarda 2, todo ok
+a = --a; //guarda 0, todo ok
+a = a--; //1º(a=a→1) 2º(a--→0) 3º(a=1º→1)
+a = a++; //1º(a=a→1) 2º(a++→2) 3º(a=1º→1)
+a = a+a--; //1º(a+a→2) 2º(a--→0) 3º(a=1º→2)
+a = a+a++; //1º(a+a→2) 2º(a++→2) 3º(a=1º→2)
+//------------------------------------------------------------------------
+a = a--+a--; // 1º(a→-1) 2º(1+0→1)
+a = a--+a--+a--; // 1º(a→-2) 2º(1+0+(-1)→0)
+a = a--+a--+a--+a--; // 1º(a→-3) 2º(1+0+(-1)+(-2)→-2)
+a = a--+a--+a--+a--+a--; // 1º(a→-4) 2º(1+0+(-1)+(-2)+(-3)→-5)
+a = a--+a--+a--+a--+a--+a--; // 1º(a→-5) 2º(1+0+(-1)+(-2)+(-3)+(-4)→-9)
+</code></pre>
+<h5 id="2-6-4" class="my-4">2.6.4.Expresiones lógicas: operadores relacionales.</h5>
+<p>En JAVA, al igual que en pseudocódigo, también tenemos las expresiones lógicas. En este tipo de expresiones el resultado será de tipo booleano. Es decir, verdadero o falso. Dichas expresiones están formadas por:</p>
+<ul class="list-group list-group-flush">
+    <li class="list-group-item">Operandos: constantes, variables y expresiones lógicas.</li>
+    <li class="list-group-item">Operadores: relacionales (==, <, >, <=, >=, !=).</li>
+</ul>
+<p>Además podemos asignar el resultado de una expresión lógica a una variable de tipo boolean</p>
+<div class="table-responsive">
+    <table class="table table-bordered table-hover table-comparison">
+        <thead class="table-primary text-center">
+            <tr>
+                <th>Operador</th>
+                <th>Operación</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="text-center operator-code">==</td>
+                <td>Igual</td>
+            </tr>
+            <tr>
+                <td class="text-center operator-code">!=</td>
+                <td>Distinto</td>
+            </tr>
+            <tr>
+                <td class="text-center operator-code">></td>
+                <td>Mayor que</td>
+            </tr>
+            <tr>
+                <td class="text-center operator-code"><</td>
+                <td>Menor que</td>
+            </tr>
+            <tr>
+                <td class="text-center operator-code">>=</td>
+                <td>Mayor o igual que</td>
+            </tr>
+            <tr>
+                <td class="text-center operator-code"><=</td>
+                <td>Menor o igual que</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<p>int a = 0, b = 1;</p>
+<p>boolean iguales = a == b; //false</p>
+<h5 id="2-6-5" class="my-4">2.6.5.Expresiones lógicas: asignando booleanos con operadores relacionales.</h5>
+<pre><code>
+//Ejemplos de asignación sobre variables boolean:
+int precio1 = 10;
+int precio2 = 30;
+boolean barato = precio1 > precio2; //false
+boolean iguales1 = 40 == (precio1 + precio2); //true
+boolean iguales2 = 40 == precio1 + precio2; //true
+boolean iguales2 = (40 == precio1) + precio2; //ERROR
+boolean distintos = precio1 != precio2; //true
+
+//Para comparar Strings se utiliza equals
+String nombre1 = "Pepe";
+String nombre2 = "Jose";
+String nombre3 = "pepe"
+boolean iguales1 = nombre1.equals(nombre2); //false
+boolean iguales2 = nombre1.equals(nombre3); //false
+boolean iguales3 = nombre1.equalsIgnoreCase(nombre3); //true
+</code></pre>
+<h5 id="2-6-6" class="my-4">2.6.6.Expresiones lógicas: operadores lógicos.</h5>
+
+
+
+
+
+
+
+
