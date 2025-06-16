@@ -69,3 +69,12 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     }
 });
+
+function descargarPDF() {
+    const link = document.createElement('a');
+    link.href = '../../downloads/1-introduccion_a_la_programacion.pdf';
+    link.download = '1-introduccion_a_la_programacion.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
