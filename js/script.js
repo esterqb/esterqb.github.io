@@ -70,11 +70,30 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-function descargarPDF() {
+async function descargarPDF() {
+  // URL RAW directa al archivo en GitHub (¡usa este formato!)
+  const url = 'https://raw.githubusercontent.com/esterqb/esterqb.github.io/main/downloads/1-introduccion_a_la_programacion.pdf';
+  
+  try {
+    // 1. Descargar el archivo como blob
+    const response = await fetch(url);
+    const blob = await response.blob();
+    
+    // 2. Crear enlace temporal
     const link = document.createElement('a');
-    link.href = '../../downloads/1-introduccion_a_la_programacion.pdf';
-    link.download = '1-introduccion_a_la_programacion.pdf';
+    link.href = window.URL.createObjectURL(blob);
+    link.download = 'Introducción a la Programación.pdf'; // Nombre personalizado
+    
+    // 3. Simular click
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+    
+    // 4. Limpiar memoria
+    setTimeout(() => window.URL.revokeObjectURL(link.href), 100);
+    
+  } catch (error) {
+    // Fallback: Abrir en nueva pestaña si hay error
+    window.open('https://esterqb.github.io/downloads/1-introduccion_a_la_programacion.pdf', '_blank');
+  }
 }
